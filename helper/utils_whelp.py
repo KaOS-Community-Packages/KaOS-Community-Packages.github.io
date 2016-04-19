@@ -97,13 +97,12 @@ item_html = u'<li class="portfolio-item2" data-id="id-%(i)s" data-type="%(catego
               rel="prettyPhoto[iframes]">%(name)s</a></h2> <p class="post-subtitle-portfolio">%(' \
             u'description)s </p> </div> </div></li>'
 
-html_item_detail_head = "<h2  style='margin-left:-15px;margin-top:-20px;'>" \
-                        "<strong>%(name)s </strong> " \
-                        "%(pkgver)s-%(pkgrel)s <a target='_blank'" \
-                        "href='https://github.com/KaOS-Community-Packages/%(name)s'><img " \
-                        "style='margin-left:10px;' height='18' width='18' " \
-                        "src='../images/github.png'></a></h2>" "<hr " \
-                        "style='margin-left:-15px;margin-top:5px;'><br>"
+html_item_detail_head = '<h2  style="margin-left:-15px;margin-top:-20px;"><strong>%(name)s </strong> ' \
+                        '%(pkgver)s-%(pkgrel)s&nbsp;&nbsp;&nbsp;&nbsp;<iframe align="center" ' \
+                        'src="https://ghbtns.com/github-btn.html?user=KaOS-Community-Packages' \
+                        '&repo=%(name)s&type=star&count=true" ' \
+                        'frameborder="0" scrolling="0" width="170px" height="20px"></iframe></h2> <hr ' \
+                        'style="margin-left:-15px;margin-top:5px;"><br>'
 
 html_item_detail_buttons=u'<div class="container-block"><div class=" text-center"><div class="well">' \
                            u'<h3>How to install?</h3><hr ><ul   style="margin-left: ' \

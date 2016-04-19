@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ea9ba95b-6ee8-4808-a2de-932154cb3976" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/data.json" afterPath="$PROJECT_DIR$/helper/data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/template.html" afterPath="$PROJECT_DIR$/helper/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/utils_whelp.py" afterPath="$PROJECT_DIR$/helper/utils_whelp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/whelp" afterPath="$PROJECT_DIR$/helper/whelp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/8192cu-dkms.html" afterPath="$PROJECT_DIR$/items/8192cu-dkms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/FluidR3_GM_soundfont.html" afterPath="$PROJECT_DIR$/items/FluidR3_GM_soundfont.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/a2jmidid.html" afterPath="$PROJECT_DIR$/items/a2jmidid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/alexandra.html" afterPath="$PROJECT_DIR$/items/alexandra.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/allegro4.html" afterPath="$PROJECT_DIR$/items/allegro4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/appmenu-qt5.html" afterPath="$PROJECT_DIR$/items/appmenu-qt5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/artefetcher.html" afterPath="$PROJECT_DIR$/items/artefetcher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/assaultcube.html" afterPath="$PROJECT_DIR$/items/assaultcube.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/atom-editor.html" afterPath="$PROJECT_DIR$/items/atom-editor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/avrdude-svn.html" afterPath="$PROJECT_DIR$/items/avrdude-svn.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/axel.html" afterPath="$PROJECT_DIR$/items/axel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/bamf.html" afterPath="$PROJECT_DIR$/items/bamf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/belle.html" afterPath="$PROJECT_DIR$/items/belle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/bluefish-svn.html" afterPath="$PROJECT_DIR$/items/bluefish-svn.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/bomi.html" afterPath="$PROJECT_DIR$/items/bomi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/boomaga.html" afterPath="$PROJECT_DIR$/items/boomaga.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/brave.html" afterPath="$PROJECT_DIR$/items/brave.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/broken.html" afterPath="$PROJECT_DIR$/items/broken.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/brscan3.html" afterPath="$PROJECT_DIR$/items/brscan3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/bup.html" afterPath="$PROJECT_DIR$/items/bup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/cadaver.html" afterPath="$PROJECT_DIR$/items/cadaver.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/cegui.html" afterPath="$PROJECT_DIR$/items/cegui.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/cgal.html" afterPath="$PROJECT_DIR$/items/cgal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/cherrytree.html" afterPath="$PROJECT_DIR$/items/cherrytree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/chrome-remote-desktop.html" afterPath="$PROJECT_DIR$/items/chrome-remote-desktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/chromium-bsu.html" afterPath="$PROJECT_DIR$/items/chromium-bsu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/cinelerra.html" afterPath="$PROJECT_DIR$/items/cinelerra.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/clazy.html" afterPath="$PROJECT_DIR$/items/clazy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/conky-manager.html" afterPath="$PROJECT_DIR$/items/conky-manager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/culmus.html" afterPath="$PROJECT_DIR$/items/culmus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/cuneiform.html" afterPath="$PROJECT_DIR$/items/cuneiform.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/curlew.html" afterPath="$PROJECT_DIR$/items/curlew.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/deadbeef.html" afterPath="$PROJECT_DIR$/items/deadbeef.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/dfilemanager.html" afterPath="$PROJECT_DIR$/items/dfilemanager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/dillo.html" afterPath="$PROJECT_DIR$/items/dillo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/diskmonitor.html" afterPath="$PROJECT_DIR$/items/diskmonitor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/dkms.html" afterPath="$PROJECT_DIR$/items/dkms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/dmenu.html" afterPath="$PROJECT_DIR$/items/dmenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/dolphin-emu-git.html" afterPath="$PROJECT_DIR$/items/dolphin-emu-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/dukto.html" afterPath="$PROJECT_DIR$/items/dukto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/eg.html" afterPath="$PROJECT_DIR$/items/eg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ekatra-fonts.html" afterPath="$PROJECT_DIR$/items/ekatra-fonts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/emacs.html" afterPath="$PROJECT_DIR$/items/emacs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/emby-server.html" afterPath="$PROJECT_DIR$/items/emby-server.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/exectime-git.html" afterPath="$PROJECT_DIR$/items/exectime-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/exfat-utils.html" afterPath="$PROJECT_DIR$/items/exfat-utils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/feh.html" afterPath="$PROJECT_DIR$/items/feh.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ffmpeg0.10.html" afterPath="$PROJECT_DIR$/items/ffmpeg0.10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/fifth.html" afterPath="$PROJECT_DIR$/items/fifth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/fluxbox.html" afterPath="$PROJECT_DIR$/items/fluxbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/fping.html" afterPath="$PROJECT_DIR$/items/fping.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/franz.html" afterPath="$PROJECT_DIR$/items/franz.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/freealut.html" afterPath="$PROJECT_DIR$/items/freealut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/freeimage.html" afterPath="$PROJECT_DIR$/items/freeimage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/fuse-exfat.html" afterPath="$PROJECT_DIR$/items/fuse-exfat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gdrive.html" afterPath="$PROJECT_DIR$/items/gdrive.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/geany-plugins.html" afterPath="$PROJECT_DIR$/items/geany-plugins.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/geany.html" afterPath="$PROJECT_DIR$/items/geany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/geogebra.html" afterPath="$PROJECT_DIR$/items/geogebra.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/giblib.html" afterPath="$PROJECT_DIR$/items/giblib.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gimp-plugin-registry.html" afterPath="$PROJECT_DIR$/items/gimp-plugin-registry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gitkraken.html" afterPath="$PROJECT_DIR$/items/gitkraken.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gnu-cobol.html" afterPath="$PROJECT_DIR$/items/gnu-cobol.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gnupg1.html" afterPath="$PROJECT_DIR$/items/gnupg1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/google-play-music-desktop-player.html" afterPath="$PROJECT_DIR$/items/google-play-music-desktop-player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gource.html" afterPath="$PROJECT_DIR$/items/gource.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gtk-engine-murrine.html" afterPath="$PROJECT_DIR$/items/gtk-engine-murrine.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gtksourceview2.html" afterPath="$PROJECT_DIR$/items/gtksourceview2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gtksourceview3.html" afterPath="$PROJECT_DIR$/items/gtksourceview3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/guichan.html" afterPath="$PROJECT_DIR$/items/guichan.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/guvcview.html" afterPath="$PROJECT_DIR$/items/guvcview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/gvsig-desktop.html" afterPath="$PROJECT_DIR$/items/gvsig-desktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/haroopad.html" afterPath="$PROJECT_DIR$/items/haroopad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/hddtemp.html" afterPath="$PROJECT_DIR$/items/hddtemp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/heritage-git.html" afterPath="$PROJECT_DIR$/items/heritage-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/hiredis.html" afterPath="$PROJECT_DIR$/items/hiredis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/hstr.html" afterPath="$PROJECT_DIR$/items/hstr.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/htmlcxx.html" afterPath="$PROJECT_DIR$/items/htmlcxx.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/hub.html" afterPath="$PROJECT_DIR$/items/hub.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/hubic.html" afterPath="$PROJECT_DIR$/items/hubic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/icoutils.html" afterPath="$PROJECT_DIR$/items/icoutils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/jemalloc.html" afterPath="$PROJECT_DIR$/items/jemalloc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/jpegoptim.html" afterPath="$PROJECT_DIR$/items/jpegoptim.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/juffed.html" afterPath="$PROJECT_DIR$/items/juffed.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/kdeplasma-applets-playbar2.html" afterPath="$PROJECT_DIR$/items/kdeplasma-applets-playbar2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/kencfs.html" afterPath="$PROJECT_DIR$/items/kencfs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/kfoldersync.html" afterPath="$PROJECT_DIR$/items/kfoldersync.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/kicad-i18n.html" afterPath="$PROJECT_DIR$/items/kicad-i18n.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/kicad.html" afterPath="$PROJECT_DIR$/items/kicad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/kronometer.html" afterPath="$PROJECT_DIR$/items/kronometer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ktageditor.html" afterPath="$PROJECT_DIR$/items/ktageditor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/leanify.html" afterPath="$PROJECT_DIR$/items/leanify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/leptonica.html" afterPath="$PROJECT_DIR$/items/leptonica.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/leveldb.html" afterPath="$PROJECT_DIR$/items/leveldb.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libchardet.html" afterPath="$PROJECT_DIR$/items/libchardet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libcurl-compat.html" afterPath="$PROJECT_DIR$/items/libcurl-compat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libdbusmenu-glib.html" afterPath="$PROJECT_DIR$/items/libdbusmenu-glib.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libdbusmenu-gtk2.html" afterPath="$PROJECT_DIR$/items/libdbusmenu-gtk2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libdbusmenu-gtk3.html" afterPath="$PROJECT_DIR$/items/libdbusmenu-gtk3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libgcj.html" afterPath="$PROJECT_DIR$/items/libgcj.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libgee.html" afterPath="$PROJECT_DIR$/items/libgee.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libgtop.html" afterPath="$PROJECT_DIR$/items/libgtop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libmediainfo.html" afterPath="$PROJECT_DIR$/items/libmediainfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libotf.html" afterPath="$PROJECT_DIR$/items/libotf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libtinfo.html" afterPath="$PROJECT_DIR$/items/libtinfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/liburlmatch.html" afterPath="$PROJECT_DIR$/items/liburlmatch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libusb-compat.html" afterPath="$PROJECT_DIR$/items/libusb-compat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libwnck3.html" afterPath="$PROJECT_DIR$/items/libwnck3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/libzen.html" afterPath="$PROJECT_DIR$/items/libzen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/liteide.html" afterPath="$PROJECT_DIR$/items/liteide.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/lshw.html" afterPath="$PROJECT_DIR$/items/lshw.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/luajit.html" afterPath="$PROJECT_DIR$/items/luajit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/lumina-desktop.html" afterPath="$PROJECT_DIR$/items/lumina-desktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/macfanctld-git.html" afterPath="$PROJECT_DIR$/items/macfanctld-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/makemkv.html" afterPath="$PROJECT_DIR$/items/makemkv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/manaplus.html" afterPath="$PROJECT_DIR$/items/manaplus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/mathmod.html" afterPath="$PROJECT_DIR$/items/mathmod.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/mediainfo.html" afterPath="$PROJECT_DIR$/items/mediainfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/megasync.html" afterPath="$PROJECT_DIR$/items/megasync.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/mendeleydesktop.html" afterPath="$PROJECT_DIR$/items/mendeleydesktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/messengerfordesktop.html" afterPath="$PROJECT_DIR$/items/messengerfordesktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/midna-gtk-icon-theme.html" afterPath="$PROJECT_DIR$/items/midna-gtk-icon-theme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/minidlna.html" afterPath="$PROJECT_DIR$/items/minidlna.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/mpv-zsh.html" afterPath="$PROJECT_DIR$/items/mpv-zsh.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ms-sys.html" afterPath="$PROJECT_DIR$/items/ms-sys.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/multibootusb.html" afterPath="$PROJECT_DIR$/items/multibootusb.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/n1.html" afterPath="$PROJECT_DIR$/items/n1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/nbwmon.html" afterPath="$PROJECT_DIR$/items/nbwmon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ncdu.html" afterPath="$PROJECT_DIR$/items/ncdu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ninja-ide.html" afterPath="$PROJECT_DIR$/items/ninja-ide.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/nrg2iso.html" afterPath="$PROJECT_DIR$/items/nrg2iso.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/nulloy.html" afterPath="$PROJECT_DIR$/items/nulloy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/numix-circle-icon-theme-git.html" afterPath="$PROJECT_DIR$/items/numix-circle-icon-theme-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/numix-icon-theme-git.html" afterPath="$PROJECT_DIR$/items/numix-icon-theme-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ocaml-ctypes.html" afterPath="$PROJECT_DIR$/items/ocaml-ctypes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ocaml-findlib.html" afterPath="$PROJECT_DIR$/items/ocaml-findlib.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ocenaudio.html" afterPath="$PROJECT_DIR$/items/ocenaudio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ogre.html" afterPath="$PROJECT_DIR$/items/ogre.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/oh-my-zsh-git.html" afterPath="$PROJECT_DIR$/items/oh-my-zsh-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ois.html" afterPath="$PROJECT_DIR$/items/ois.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/opencobolide.html" afterPath="$PROJECT_DIR$/items/opencobolide.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/opendungeons.html" afterPath="$PROJECT_DIR$/items/opendungeons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/openh264.html" afterPath="$PROJECT_DIR$/items/openh264.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/openscenegraph.html" afterPath="$PROJECT_DIR$/items/openscenegraph.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/otter-browser-git.html" afterPath="$PROJECT_DIR$/items/otter-browser-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/owncloud-client.html" afterPath="$PROJECT_DIR$/items/owncloud-client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/palemoon.html" afterPath="$PROJECT_DIR$/items/palemoon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/par2cmdline.html" afterPath="$PROJECT_DIR$/items/par2cmdline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pdftk.html" afterPath="$PROJECT_DIR$/items/pdftk.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/performous-freesongs.html" afterPath="$PROJECT_DIR$/items/performous-freesongs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/performous.html" afterPath="$PROJECT_DIR$/items/performous.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-encode-locale.html" afterPath="$PROJECT_DIR$/items/perl-encode-locale.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-http-cookies.html" afterPath="$PROJECT_DIR$/items/perl-http-cookies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-http-daemon.html" afterPath="$PROJECT_DIR$/items/perl-http-daemon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-http-message.html" afterPath="$PROJECT_DIR$/items/perl-http-message.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-http-negotiate.html" afterPath="$PROJECT_DIR$/items/perl-http-negotiate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-io-html.html" afterPath="$PROJECT_DIR$/items/perl-io-html.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-io-socket-ssl.html" afterPath="$PROJECT_DIR$/items/perl-io-socket-ssl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-json.html" afterPath="$PROJECT_DIR$/items/perl-json.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-libwww.html" afterPath="$PROJECT_DIR$/items/perl-libwww.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-lwp-mediatypes.html" afterPath="$PROJECT_DIR$/items/perl-lwp-mediatypes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-lwp-protocol-https.html" afterPath="$PROJECT_DIR$/items/perl-lwp-protocol-https.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-net-http.html" afterPath="$PROJECT_DIR$/items/perl-net-http.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-net-ssleay.html" afterPath="$PROJECT_DIR$/items/perl-net-ssleay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-rename.html" afterPath="$PROJECT_DIR$/items/perl-rename.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-socket6.html" afterPath="$PROJECT_DIR$/items/perl-socket6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/perl-www-robotrules.html" afterPath="$PROJECT_DIR$/items/perl-www-robotrules.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/peru-git.html" afterPath="$PROJECT_DIR$/items/peru-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/photoqt.html" afterPath="$PROJECT_DIR$/items/photoqt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/php-xdebug.html" afterPath="$PROJECT_DIR$/items/php-xdebug.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/phppgadmin.html" afterPath="$PROJECT_DIR$/items/phppgadmin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/phpstorm.html" afterPath="$PROJECT_DIR$/items/phpstorm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/physfs.html" afterPath="$PROJECT_DIR$/items/physfs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/picard.html" afterPath="$PROJECT_DIR$/items/picard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pingus.html" afterPath="$PROJECT_DIR$/items/pingus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/plank.html" afterPath="$PROJECT_DIR$/items/plank.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/plex-media-server.html" afterPath="$PROJECT_DIR$/items/plex-media-server.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/plib.html" afterPath="$PROJECT_DIR$/items/plib.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pngcrush.html" afterPath="$PROJECT_DIR$/items/pngcrush.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/polarssl.html" afterPath="$PROJECT_DIR$/items/polarssl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ppsspp.html" afterPath="$PROJECT_DIR$/items/ppsspp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/profile-sync-daemon.html" afterPath="$PROJECT_DIR$/items/profile-sync-daemon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/psi-plus.html" afterPath="$PROJECT_DIR$/items/psi-plus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pulseaudio-equalizer.html" afterPath="$PROJECT_DIR$/items/pulseaudio-equalizer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/putty.html" afterPath="$PROJECT_DIR$/items/putty.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pv.html" afterPath="$PROJECT_DIR$/items/pv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pycharm-community.html" afterPath="$PROJECT_DIR$/items/pycharm-community.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pychess.html" afterPath="$PROJECT_DIR$/items/pychess.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/pygtksourceview2.html" afterPath="$PROJECT_DIR$/items/pygtksourceview2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-acl.html" afterPath="$PROJECT_DIR$/items/python2-acl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-babel.html" afterPath="$PROJECT_DIR$/items/python2-babel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-cffi.html" afterPath="$PROJECT_DIR$/items/python2-cffi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-cgal.html" afterPath="$PROJECT_DIR$/items/python2-cgal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-lockfile.html" afterPath="$PROJECT_DIR$/items/python2-lockfile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-pgpdump.html" afterPath="$PROJECT_DIR$/items/python2-pgpdump.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-psutil.html" afterPath="$PROJECT_DIR$/items/python2-psutil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-pydns.html" afterPath="$PROJECT_DIR$/items/python2-pydns.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-pyenchant.html" afterPath="$PROJECT_DIR$/items/python2-pyenchant.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-scipy.html" afterPath="$PROJECT_DIR$/items/python2-scipy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-shapely.html" afterPath="$PROJECT_DIR$/items/python2-shapely.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-snowballstemmer.html" afterPath="$PROJECT_DIR$/items/python2-snowballstemmer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-sphinx-alabaster-theme.html" afterPath="$PROJECT_DIR$/items/python2-sphinx-alabaster-theme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-sphinx_rtd_theme.html" afterPath="$PROJECT_DIR$/items/python2-sphinx_rtd_theme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-xattr.html" afterPath="$PROJECT_DIR$/items/python2-xattr.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python2-yaml.html" afterPath="$PROJECT_DIR$/items/python2-yaml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-crypto.html" afterPath="$PROJECT_DIR$/items/python3-crypto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-epc.html" afterPath="$PROJECT_DIR$/items/python3-epc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-pyenchant.html" afterPath="$PROJECT_DIR$/items/python3-pyenchant.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-scipy.html" afterPath="$PROJECT_DIR$/items/python3-scipy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-sexpdata.html" afterPath="$PROJECT_DIR$/items/python3-sexpdata.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-tox.html" afterPath="$PROJECT_DIR$/items/python3-tox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/python3-yad.html" afterPath="$PROJECT_DIR$/items/python3-yad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qarma.html" afterPath="$PROJECT_DIR$/items/qarma.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qconf.html" afterPath="$PROJECT_DIR$/items/qconf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qdc.html" afterPath="$PROJECT_DIR$/items/qdc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qdirstat.html" afterPath="$PROJECT_DIR$/items/qdirstat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qmapshack.html" afterPath="$PROJECT_DIR$/items/qmapshack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qterminal.html" afterPath="$PROJECT_DIR$/items/qterminal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qtermwidget.html" afterPath="$PROJECT_DIR$/items/qtermwidget.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/quiterss.html" afterPath="$PROJECT_DIR$/items/quiterss.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/qweechat-git.html" afterPath="$PROJECT_DIR$/items/qweechat-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ragel.html" afterPath="$PROJECT_DIR$/items/ragel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/ranger.html" afterPath="$PROJECT_DIR$/items/ranger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/rar.html" afterPath="$PROJECT_DIR$/items/rar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/redis.html" afterPath="$PROJECT_DIR$/items/redis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/retroarch.html" afterPath="$PROJECT_DIR$/items/retroarch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/rftg.html" afterPath="$PROJECT_DIR$/items/rftg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/rkrenamer.html" afterPath="$PROJECT_DIR$/items/rkrenamer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/rlwrap.html" afterPath="$PROJECT_DIR$/items/rlwrap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/routino.html" afterPath="$PROJECT_DIR$/items/routino.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/samsung-uld-printer.html" afterPath="$PROJECT_DIR$/items/samsung-uld-printer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sayonara-player.html" afterPath="$PROJECT_DIR$/items/sayonara-player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/scudcloud.html" afterPath="$PROJECT_DIR$/items/scudcloud.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sdl1_ttf.html" afterPath="$PROJECT_DIR$/items/sdl1_ttf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sdl2_image.html" afterPath="$PROJECT_DIR$/items/sdl2_image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sdl2_mixer.html" afterPath="$PROJECT_DIR$/items/sdl2_mixer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sdl_gfx.html" afterPath="$PROJECT_DIR$/items/sdl_gfx.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/setconf.html" afterPath="$PROJECT_DIR$/items/setconf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sfml.html" afterPath="$PROJECT_DIR$/items/sfml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/shntool.html" afterPath="$PROJECT_DIR$/items/shntool.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/simplenote.html" afterPath="$PROJECT_DIR$/items/simplenote.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sir.html" afterPath="$PROJECT_DIR$/items/sir.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/slack.html" afterPath="$PROJECT_DIR$/items/slack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/smartgit.html" afterPath="$PROJECT_DIR$/items/smartgit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/snapper.html" afterPath="$PROJECT_DIR$/items/snapper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/snappy.html" afterPath="$PROJECT_DIR$/items/snappy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/soulseekqt.html" afterPath="$PROJECT_DIR$/items/soulseekqt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/soundnode.html" afterPath="$PROJECT_DIR$/items/soundnode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/spambayes.html" afterPath="$PROJECT_DIR$/items/spambayes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/speed-dreams.html" afterPath="$PROJECT_DIR$/items/speed-dreams.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/speedcrunch.html" afterPath="$PROJECT_DIR$/items/speedcrunch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/speedtest-cli.html" afterPath="$PROJECT_DIR$/items/speedtest-cli.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/spotify.html" afterPath="$PROJECT_DIR$/items/spotify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/stremio.html" afterPath="$PROJECT_DIR$/items/stremio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/sublime-text-dev.html" afterPath="$PROJECT_DIR$/items/sublime-text-dev.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/supercollider.html" afterPath="$PROJECT_DIR$/items/supercollider.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/supertux2.html" afterPath="$PROJECT_DIR$/items/supertux2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/supertuxkart.html" afterPath="$PROJECT_DIR$/items/supertuxkart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/swh-plugins.html" afterPath="$PROJECT_DIR$/items/swh-plugins.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/tache.html" afterPath="$PROJECT_DIR$/items/tache.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/tea.html" afterPath="$PROJECT_DIR$/items/tea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/texlive-fontsextra.html" afterPath="$PROJECT_DIR$/items/texlive-fontsextra.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/texlive-moderncv.html" afterPath="$PROJECT_DIR$/items/texlive-moderncv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/texlive-pgfgantt.html" afterPath="$PROJECT_DIR$/items/texlive-pgfgantt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/texstudio.html" afterPath="$PROJECT_DIR$/items/texstudio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/thermald.html" afterPath="$PROJECT_DIR$/items/thermald.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/tigervnc.html" afterPath="$PROJECT_DIR$/items/tigervnc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/tilda.html" afterPath="$PROJECT_DIR$/items/tilda.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/timeshift.html" afterPath="$PROJECT_DIR$/items/timeshift.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/tint2.html" afterPath="$PROJECT_DIR$/items/tint2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/tmux.html" afterPath="$PROJECT_DIR$/items/tmux.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/toluapp.html" afterPath="$PROJECT_DIR$/items/toluapp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/translate-shell.html" afterPath="$PROJECT_DIR$/items/translate-shell.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/uchardet.html" afterPath="$PROJECT_DIR$/items/uchardet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/unified-remote-server.html" afterPath="$PROJECT_DIR$/items/unified-remote-server.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/urbanterror.html" afterPath="$PROJECT_DIR$/items/urbanterror.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vivaldi-ffmpeg.html" afterPath="$PROJECT_DIR$/items/vivaldi-ffmpeg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vivaldi-snapshot.html" afterPath="$PROJECT_DIR$/items/vivaldi-snapshot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vivaldi.html" afterPath="$PROJECT_DIR$/items/vivaldi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vorbisgain.html" afterPath="$PROJECT_DIR$/items/vorbisgain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vrms-arch.html" afterPath="$PROJECT_DIR$/items/vrms-arch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vscode.html" afterPath="$PROJECT_DIR$/items/vscode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vstudio.html" afterPath="$PROJECT_DIR$/items/vstudio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/vte.html" afterPath="$PROJECT_DIR$/items/vte.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/waifu.html" afterPath="$PROJECT_DIR$/items/waifu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/warsow.html" afterPath="$PROJECT_DIR$/items/warsow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/warzone2100.html" afterPath="$PROJECT_DIR$/items/warzone2100.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/weather.html" afterPath="$PROJECT_DIR$/items/weather.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/webcore-fonts.html" afterPath="$PROJECT_DIR$/items/webcore-fonts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/webkitfltk.html" afterPath="$PROJECT_DIR$/items/webkitfltk.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/webtorrent-desktop.html" afterPath="$PROJECT_DIR$/items/webtorrent-desktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/weechat.html" afterPath="$PROJECT_DIR$/items/weechat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/wesnoth-data.html" afterPath="$PROJECT_DIR$/items/wesnoth-data.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/wesnoth.html" afterPath="$PROJECT_DIR$/items/wesnoth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/whatpulse.html" afterPath="$PROJECT_DIR$/items/whatpulse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/whatsapp-desktop.html" afterPath="$PROJECT_DIR$/items/whatsapp-desktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/whois.html" afterPath="$PROJECT_DIR$/items/whois.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/widelands-data.html" afterPath="$PROJECT_DIR$/items/widelands-data.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/widelands.html" afterPath="$PROJECT_DIR$/items/widelands.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/wordpress-desktop.html" afterPath="$PROJECT_DIR$/items/wordpress-desktop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/wps-office-i18n-es-es.html" afterPath="$PROJECT_DIR$/items/wps-office-i18n-es-es.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/wps-office.html" afterPath="$PROJECT_DIR$/items/wps-office.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/xcftools.html" afterPath="$PROJECT_DIR$/items/xcftools.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/xclip.html" afterPath="$PROJECT_DIR$/items/xclip.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/xcompmgr.html" afterPath="$PROJECT_DIR$/items/xcompmgr.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/xdm.html" afterPath="$PROJECT_DIR$/items/xdm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/yad.html" afterPath="$PROJECT_DIR$/items/yad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/yagf.html" afterPath="$PROJECT_DIR$/items/yagf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/yarock.html" afterPath="$PROJECT_DIR$/items/yarock.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/youtube-dl-applet.html" afterPath="$PROJECT_DIR$/items/youtube-dl-applet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/youtube-dl-git.html" afterPath="$PROJECT_DIR$/items/youtube-dl-git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/zim.html" afterPath="$PROJECT_DIR$/items/zim.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/items/zsh.html" afterPath="$PROJECT_DIR$/items/zsh.html" />
+    </list>
+    <ignored path="KaOS-Community-Packages.github.io.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="KaOS-Community-Packages.github.io" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="whelp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/whelp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template_item.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/template_item.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils_whelp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helper/utils_whelp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6960143">
+              <caret line="105" column="84" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-49.333332">
+              <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/helper/template.html" />
+        <option value="$PROJECT_DIR$/helper/whelp" />
+        <option value="$PROJECT_DIR$/helper/utils_whelp.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1920" />
+    <option name="width" value="1080" />
+    <option name="height" value="1852" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KaOS-Community-Packages.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/v0.10.35/bin/node" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KaOS-Community-Packages.github.io" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea9ba95b-6ee8-4808-a2de-932154cb3976" name="Default" comment="" />
+      <created>1461069640541</created>
+      <option name="number" value="Default" />
+      <updated>1461069640541</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="0" width="1080" height="1852" extended-state="2" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25433525" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/helper/template_item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-49.333332">
+          <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/whelp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/utils_whelp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6960143">
+          <caret line="105" column="84" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

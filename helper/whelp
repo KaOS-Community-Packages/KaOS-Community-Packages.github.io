@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.7.6"
+__VERSION__ = "0.7.7"
 
 import sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -56,7 +56,7 @@ def synchronize(metadata):
                                 category="Others",
                                 screenshot="images/big.png",
                                 created_at=item_remote["created_at"],
-                                pushed_at=item_remote["updated_at"],
+                                pushed_at=item_remote["pushed_at"],
                                 stargazers_count=item_remote["stargazers_count"])
 
                 for key, value in parser_pkg(new_item["name"]).iteritems():
@@ -177,10 +177,6 @@ def generate_html(rapid=False):
     print "=================================="
     print "Rebuild HTML completed!!!"
     print "=================================="
-        # print packages_extra
-    # except:
-    #     print "Error in generation of index.html"
-    #     sys.exit()
 
 
 def generate_detail_html(item):
@@ -191,7 +187,7 @@ def generate_detail_html(item):
         html_item_detail = html_item_detail_head % (dict(name=item['name'], pkgver="", pkgrel=""))
 
     vars = ['description', 'url', 'license', 'depends', 'makedepends',
-            'requerid_by', 'created_at', 'pushed_at', 'stargazers_count']
+            'requerid_by', 'created_at', 'pushed_at']
 
     item['requerid_by'], broken = [], ""
     for var in (var for var in vars if var in item.keys()):
@@ -218,18 +214,18 @@ def generate_detail_html(item):
 
 
 def parser_pkg(name):
-    # try:
-    url = "https://raw.githubusercontent.com/KaOS-Community-Packages/%s/master/PKGBUILD"
-    ini_str = '[pkg]\n' + urllib.urlopen(url % (name)).read()
-    for str_func in ['pkgver', 'check', 'prepare', 'build', 'package']:
-        ini_str = re.sub(str_func + '.*\((.|\n)*', '', ini_str)
-        ini_str = ini_str.replace("(\n", "(").replace("\n)", ")")
-    ini_fp = StringIO.StringIO(ini_str)
-    config = ConfigParser.RawConfigParser()
-    config.readfp(ini_fp)
-    return dict(config.items('pkg'))
-    # except:
-    #     return dict(pkgver="")
+    try:
+        url = "https://raw.githubusercontent.com/KaOS-Community-Packages/%s/master/PKGBUILD"
+        ini_str = '[pkg]\n' + urllib.urlopen(url % (name)).read()
+        for str_func in ['pkgver', 'check', 'prepare', 'build', 'package']:
+            ini_str = re.sub(str_func + '.*\((.|\n)*', '', ini_str)
+            ini_str = ini_str.replace("(\n", "(").replace("\n)", ")")
+        ini_fp = StringIO.StringIO(ini_str)
+        config = ConfigParser.RawConfigParser()
+        config.readfp(ini_fp)
+        return dict(config.items('pkg'))
+    except:
+        return dict(pkgver="")
 
 
 def main():
