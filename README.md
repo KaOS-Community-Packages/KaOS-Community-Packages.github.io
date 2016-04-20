@@ -28,7 +28,7 @@ $ ./whelp -s
 ```
 
 #### Categories
-To assign a category to a package we must run the next command:
+To assign a category to  package *vscode* we must run the next command:
 
 ```
 $ ./whelp -n "vscode" -c "Development"
@@ -50,7 +50,7 @@ The categories availables are the following:
 
 
 #### Screenshots
-To assign a screenshot to a package we must run the next command:
+To assign a screenshot to package *vscode* we must run the next command:
 
 ```
 $ ./whelp -n "vscode" -ss "images/screenshots/vscode.jpg"
