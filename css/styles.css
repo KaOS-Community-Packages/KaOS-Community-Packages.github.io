@@ -242,3 +242,9 @@ li.ui-state-default:last-child {
     border-bottom: none;
 }
 
+.right {
+    position: absolute;
+    right: 25px;
+    top:10px;
+;
+}

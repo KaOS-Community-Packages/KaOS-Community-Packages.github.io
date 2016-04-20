@@ -55,7 +55,7 @@ To assign a screenshot to a package we must run the next command:
 ```
 $ ./whelp -n "vscode" -ss "images/screenshots/vscode.jpg"
 ```
-Is important put first the image into the screenshots directory. The screenshot must be realized in jpg format and aproximatelly 500x500 px. 
+Is important put first the image into the screenshots directory. The screenshot must be realized in jpg format and aproximatelly 550x500 px. 
 
 The screenshot's url also can be remote, like the next example:
 

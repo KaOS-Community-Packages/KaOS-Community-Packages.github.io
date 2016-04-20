@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from subprocess import Popen, PIPE
-import re,json, ast ,datetime
+import re, json, ast, datetime
 
 
 def get_data_local():
@@ -88,7 +88,8 @@ broken_item_html= '<a href="%(name)s.html">%(name)s</a><br>'
 broken_html = "<h2  style='color:red;margin-left:-15px;margin-top:-20px;'><strong>Broken packages " \
               "[%s]</strong></h2><hr style='margin-left:-15px;margin-top:5px;'><br>"
 
-item_html = u'<li class="portfolio-item2" data-id="id-%(i)s" data-type="%(category)s"><div>\
+item_html = u'<li class="portfolio-item2" data-id="id-%(i)s" data-type="%(category)s" data-name' \
+            u'="%(name)s"><div>\
               <span class="image-block"> <a class="image-zoom" href="%(screenshot)s" rel="prettyPhoto"  \
               title="%(name)s: %(description)s"><img width="170" height="130" src="%(screenshot)s" \
             alt="%(name)s" title="%(name)s" ></a> </span> <div class="home-portfolio-text"> <h2 \
