@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.1"
+__VERSION__ = "0.8.2"
 
 import sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -179,6 +179,16 @@ def generate_html(rapid=False):
     print "=================================="
 
 
+def generate_html_item(name):
+    for item_local in (item_local for item_local in data_local if
+                       item_local["name"] == name):
+            generate_detail_html(item_local)
+            print "=================================="
+            print "Rebuild HTML %s completed!!!"%(item_local['name'])
+            print "=================================="
+            return
+
+
 def generate_detail_html(item):
     print item['name']
     if 'pkgver' in item.keys() and 'pkgrel' in item.keys():
@@ -272,7 +282,7 @@ def main():
         generate_html()
     elif args.package and args.metadata:
         get_metadata(args.package)
-        generate_html(True)
+        generate_html_item(args.package)
     elif args.package and args.info:
         print_item(args.package)
     elif args.regenerate:
