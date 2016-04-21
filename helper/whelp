@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8"
+__VERSION__ = "0.8.1"
 
 import sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -272,6 +272,7 @@ def main():
         generate_html()
     elif args.package and args.metadata:
         get_metadata(args.package)
+        generate_html(True)
     elif args.package and args.info:
         print_item(args.package)
     elif args.regenerate:
