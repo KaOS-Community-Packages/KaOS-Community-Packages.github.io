@@ -1,6 +1,11 @@
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
+
 from subprocess import Popen, PIPE
-import re, json, ast, datetime
+import re
+import json
+import ast
+import datetime
 
 
 def get_data_local():
@@ -12,32 +17,30 @@ def get_data_local():
 data_local = get_data_local()
 
 
-def build_item_template(data_local, item, var, packages_extra, html,broken):
-
+def build_item_template(data_local, item, var, packages_extra, html, broken):
     if var == 'url':
         while "$" in item[var]:
             for key in item:
-                item[var]= item[var].replace(u"${" + key+u"}",str(item[key])).replace(
-                    u"$" + key + "",str( item[key]))
+                item[var] = item[var].replace(u"${" + key+u"}", str(item[key])).replace(
+                    u"$" + key + "", str(item[key]))
 
         html += '<strong>%s:</strong> <a  target="_blank" href=%s>%s</a><br>' \
                 % (var, item[var], item[var].replace("'", "").replace('"', ''))
 
     elif var in ('created_at', 'pushed_at'):
         datef = datetime.datetime.strptime(item[var], "%Y-%m-%dT%H:%M:%SZ")
-        html += '<strong>%s:</strong> %s <br>' %(var,datef.strftime( "%A %b %d, %Y at %H:%M"))
+        html += '<strong>%s:</strong> %s <br>' % (var, datef.strftime("%A %b %d, %Y at %H:%M"))
 
-
-    elif var in ('depends','makedepends'):
+    elif var in ('depends', 'makedepends'):
         html += '<strong>%s: </strong>' % var
         str_partial = re.sub(r'\n', '', item[var])
-        str_partial = re.sub(r"' *'", "','",str_partial )
+        str_partial = re.sub(r"' *'", "','", str_partial)
         str_partial = re.sub(r'" *"', '","', str_partial)
 
         try:
             deps = ast.literal_eval(str_partial)
         except:
-            deps =()
+            deps = ()
         if type(deps) is not tuple:
             deps = (deps,)
         for dep in deps:
@@ -58,6 +61,7 @@ def build_item_template(data_local, item, var, packages_extra, html,broken):
                     html += '<i class="dependency-null" > %s</i>&nbsp;' % dep
                     broken = True
         html += "<br>"
+
     elif var == 'requerid_by':
         req = False
         html_prov = '<strong>requerid by: </strong>'
@@ -73,17 +77,18 @@ def build_item_template(data_local, item, var, packages_extra, html,broken):
         html_prov += "<br>"
         if req:
             html += html_prov
+
     elif var == 'stargazers_count':
         html += '<strong>%s:</strong> %s stars<br>' % ('popularity', unicode(item[var]))
+
     else:
         html += '<strong>%s:</strong> %s<br>' % (
             var, item[var].replace('(', '').replace(')', ''))
 
-    return html,broken
+    return html, broken
 
 
-
-broken_item_html= '<a href="%(name)s.html">%(name)s</a><br>'
+broken_item_html = '<a href="%(name)s.html">%(name)s</a><br>'
 
 broken_html = "<h2  style='color:red;margin-left:-15px;margin-top:-20px;'><strong>Broken packages " \
               "[%s]</strong></h2><hr style='margin-left:-15px;margin-top:5px;'><br>"
@@ -105,19 +110,19 @@ html_item_detail_head = '<h2  style="margin-left:-15px;margin-top:-20px;"><stron
                         'frameborder="0" scrolling="0" width="170px" height="20px"></iframe></h2> <hr ' \
                         'style="margin-left:-15px;margin-top:5px;"><br>'
 
-html_item_detail_buttons=u'<div class="container-block"><div class=" text-center"><div class="well">' \
+html_item_detail_buttons = u'<div class="container-block"><div class=" text-center"><div class="well">' \
                            u'<h3>How to install?</h3><hr ><ul   style="margin-left: ' \
-                         u'14px;margin-top: 15px"><strong>KCP helper</strong></br><li class="ui-state-default"><table ' \
+                           u'14px;margin-top: 15px"><strong>KCP helper</strong></br><li class="ui-state-default"><table ' \
                            u'tyle="width:100%%"> <tr><td width="75%%">Searching or getting the ' \
-                         u'needed files from KaOS Community Packages has been simplified with the ' \
-                         u'addition of the package “kcp”. You can click the button to copy the required' \
+                           u'needed files from KaOS Community Packages has been simplified with the ' \
+                           u'addition of the package “kcp”. You can click the button to copy the required' \
                            u' command kcp and paste it into your console.</td><td ' \
-                         u'width="5%%"></td><td style="vertical-align: mid;" width="20%%"><a class="btn button ' \
-                         u'big" data-clipboard-text="kcp -i %(name)s" title="click to copy to ' \
+                           u'width="5%%"></td><td style="vertical-align: mid;" width="20%%"><a class="btn button ' \
+                           u'big" data-clipboard-text="kcp -i %(name)s" title="click to copy to ' \
                            u'clipboard">Copy command</a></td></tr></table></li></ul><ul ' \
                            u'style="margin-left: 14px"> <strong>ZIP file</strong><li ' \
                            u'class="ui-state-default"><table style="width:100%%"><tr><td ' \
-                         u'width="75%%">Click the just downloaded package zip and extract file to your build' \
+                           u'width="75%%">Click the just downloaded package zip and extract file to your build' \
                            u' folder. The call to start to build and install the needed dependencies' \
                            u' is <b>makepkg -si</b>.</td><td width="5%%"></td><td ' \
                            u'style="vertical-align: mid;" width="20%%"><a target="_blank" ' \
