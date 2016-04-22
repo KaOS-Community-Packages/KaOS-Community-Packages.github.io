@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
 """whelp: a command line helper for simplify KCP-center update"""
@@ -16,6 +16,7 @@ def get_repos_kcp():
               private_keys
     per_page = 100
     repos, page = [], 1
+
     while True:
         print "Repositories kcp: range(%s-%s)" % ((page - 1) * per_page, page * per_page)
         partial_repos = json.loads(urllib.urlopen(url_kcp % (page, per_page)).read())
@@ -26,15 +27,18 @@ def get_repos_kcp():
                 print "API rate limit exceeded"
                 sys.exit()
             break
+
     if len(repos) > 0:
         print "============================="
         print "Total-repositories: %s" % (len(repos))
+
     return repos
 
 
 def get_repos_kaos():
     url_kaosx = "https://api.github.com/repos/kaosx/%s/git/trees/master?" + private_keys
     repos_kaos = {}
+
     for kaosx in ['core', 'main', 'apps']:
         partial = json.loads(urllib.urlopen(url_kaosx % (kaosx)).read())
         repos_kaos[kaosx] = [item['path'] for item in partial['tree']]
@@ -44,7 +48,6 @@ def get_repos_kaos():
 
 
 def synchronize(metadata):
-
     data_remote = get_repos_kcp()
 
     for item_remote in data_remote:
@@ -64,15 +67,13 @@ def synchronize(metadata):
                 data_local.insert(0, new_item)
                 print "Add: ", new_item["name"]
 
-
     for item_local in data_local:
-        if not [item_remote for item_remote in data_remote if item_remote["name"] == item_local[
-            "name"]]:
+        if not [item_remote for item_remote in data_remote if item_remote["name"] == item_local["name"]]:
             print "Del: ", item_local["name"]
             data_local.remove(item_local)
 
     for item_local in data_local:
-        for item_remote in (item_remote for item_remote in data_remote if item_remote["name"]== item_local["name"]):
+        for item_remote in (item_remote for item_remote in data_remote if item_remote["name"] == item_local["name"]):
             item_local["pushed_at"] = item_remote["pushed_at"]
 
     if metadata:
@@ -84,8 +85,6 @@ def synchronize(metadata):
 
     with open('data.json', 'w') as outfile:
         json.dump(data_local, outfile)
-
-
 
 
 def set_value(name, var, value):
@@ -107,9 +106,11 @@ def set_value(name, var, value):
 
 def get_metadata(name):
     list_item = list(item_local for item_local in data_local if item_local["name"] == name)
+
     if not list_item:
         print "error: the package [%s] not exists" % (name)
         sys.exit()
+
     for item in list_item:
         for key, value in parser_pkg(name).iteritems():
             item[key] = value
@@ -147,6 +148,7 @@ def generate_html(rapid=False):
         print "This can take a few minutes..."
 
     text, broken_packages = "", []
+
     for i, item_local in enumerate(data_local):
         item_local['i'] = i
         text += item_html % (item_local)
@@ -184,13 +186,14 @@ def generate_html_item(name):
                        item_local["name"] == name):
             generate_detail_html(item_local)
             print "=================================="
-            print "Rebuild HTML %s completed!!!"%(item_local['name'])
+            print "Rebuild HTML %s completed!!!" % (item_local['name'])
             print "=================================="
             return
 
 
 def generate_detail_html(item):
     print item['name']
+
     if 'pkgver' in item.keys() and 'pkgrel' in item.keys():
         html_item_detail = html_item_detail_head % item
     else:
@@ -203,7 +206,6 @@ def generate_detail_html(item):
     for var in (var for var in vars if var in item.keys()):
         html_item_detail, broken = build_item_template(data_local, item, var, packages_extra,
                                                        html_item_detail, broken)
-
 
     if broken:
         html_item_detail = '<b style="margin-left:700px;color:red;" >BROKEN</b>' + html_item_detail
@@ -251,7 +253,7 @@ def main():
                                      git push origin master
                                              '''))
 
-    parser.add_argument('-v', dest='version', help='Show version', action='version', \
+    parser.add_argument('-v', dest='version', help='Show version', action='version',
                         version=__VERSION__)
     parser.add_argument("-n", dest="package", help="Name of package")
     parser.add_argument("-s", dest="synchronize", help="Synchronize remote repos changes",
@@ -262,8 +264,7 @@ def main():
     parser.add_argument("-r", dest="regenerate", help="Rebuild html files", action="store_true",
                         default=False)
     parser.add_argument("-i", dest="info", help="Show data of package", action="store_true",
-                        default=
-                        False)
+                        default=False)
     parser.add_argument("-m", dest="metadata", help="Synchronize remote metadata of the package",
                         action="store_true", default=False)
     parser.add_argument("-d", dest="description", help="Set new description of package")
