@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.2"
+__VERSION__ = "0.8.3"
 
 import sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -99,7 +99,6 @@ def set_value(name, var, value):
                 json.dump(data_local, outfile)
 
             print "New %s for %s: %s" % (var, name, value)
-            print "====================================="
     except:
         print "Error in set new %s" % var
 
@@ -131,7 +130,6 @@ def print_item(name):
             print "name: %s" % item['name']
             print "description: %s" % item['description']
             print "category: %s" % item['category']
-            print "thumb: %s" % item['thumb']
             print "screenshot: %s" % item['screenshot']
             print "====================================="
     except:
