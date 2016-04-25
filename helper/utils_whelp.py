@@ -18,6 +18,8 @@ data_local = get_data_local()
 
 
 def build_item_template(data_local, item, var, packages_extra, html, broken):
+
+
     if var == 'url':
         while "$" in item[var]:
             for key in item:
@@ -84,6 +86,7 @@ def build_item_template(data_local, item, var, packages_extra, html, broken):
     else:
         html += '<strong>%s:</strong> %s<br>' % (
             var, item[var].replace('(', '').replace(')', ''))
+
 
     return html, broken
 

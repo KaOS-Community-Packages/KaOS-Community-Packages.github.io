@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.5"
+__VERSION__ = "0.8.6"
 
 import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -206,9 +206,16 @@ def generate_detail_html(item):
                'requerid_by', 'created_at', 'pushed_at']
 
     item['requerid_by'], broken = [], ""
+    html_item_detail += '<table cellpadding="10"><tr><td width="80%">'
+
     for var in (var for var in columns if var in item.keys()):
         html_item_detail, broken = build_item_template(data_local, item, var, packages_extra,
                                                        html_item_detail, broken)
+
+    html_item_detail += '</td><td width="200px"><img style="border:1px solid #666666" width="200" height="150" ' \
+                        'src="../%(' \
+                        'screenshot)s" \
+            alt="%(name)s" title="%(name)s"></td></tr></table>' % item
 
     if broken:
         html_item_detail = '<b style="margin-left:700px;color:red;" >BROKEN</b>' + html_item_detail
