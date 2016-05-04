@@ -1,0 +1,9 @@
+#!/bin/bash
+git pull
+cd helper
+./whelp -sm
+cd ..
+git add images/.
+git add items/.
+git commit -am "update web"
+git push
