@@ -3,11 +3,11 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.7"
+__VERSION__ = "0.8.8"
 
 import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
-from utils_whelp import private_keys, data_local, packages_extra, item_html, broken_html, \
+from utils_whelp import private_keys, data_local,  item_html, broken_html, \
     broken_item_html, build_item_template, html_item_detail_buttons, html_item_detail_head
 
 
@@ -209,8 +209,8 @@ def generate_detail_html(item):
     html_item_detail += '<table cellpadding="10"><tr><td width="80%">'
 
     for var in (var for var in columns if var in item.keys()):
-        html_item_detail, broken = build_item_template(data_local, item, var, packages_extra,
-                                                       html_item_detail, broken)
+        html_item_detail, broken = build_item_template(data_local, item, var, html_item_detail,
+                                                       broken)
 
     if item['screenshot'][:4]=="http":
         screenshot = item['screenshot']

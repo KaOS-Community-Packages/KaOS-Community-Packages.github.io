@@ -565,6 +565,8 @@ div.pp_pic_holder a:focus {
     outline: none;
 }
 
+
+
 div.pp_overlay {
     background: #000;
     display: none;
@@ -664,6 +666,7 @@ div.pp_pic_holder {
 
 .pp_nav .pp_play,
 .pp_nav .pp_pause {
+    display:none;
     float: left;
     margin-right: 4px;
     text-indent: -10000px;
@@ -671,7 +674,7 @@ div.pp_pic_holder {
 
 a.pp_arrow_previous,
 a.pp_arrow_next {
-    display: block;
+    display: none;
     float: left;
     height: 15px;
     margin-top: 3px;
@@ -688,7 +691,7 @@ a.pp_arrow_next {
 }
 
 .pp_gallery {
-    left: 50%;
+    left: 10%;
     margin-top: -50px;
     position: absolute;
     z-index: 10000;
@@ -828,15 +831,15 @@ a.pp_close {
     width: 24px;
 }
 
-#pp_full_res {
+pp_full_res {
     line-height: 1 !important;
 }
 
-#pp_full_res .pp_inline {
+pp_full_res .pp_inline {
     text-align: left;
 }
 
-#pp_full_res .pp_inline p {
+pp_full_res .pp_inline p {
     margin: 0 0 15px 0;
 }
 
