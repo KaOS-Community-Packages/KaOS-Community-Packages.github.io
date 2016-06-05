@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.9"
+__VERSION__ = "0.8.10"
 
 import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -152,7 +152,7 @@ def generate_html(rapid=False):
 
     text, broken_packages = "", []
 
-    for i, item_local in enumerate(data_local):
+    for i, item_local in enumerate(sorted(data_local, key=lambda k: k['stargazers_count'], reverse=True) ):
         item_local['i'] = i
         text += item_html % item_local
         if not rapid:
