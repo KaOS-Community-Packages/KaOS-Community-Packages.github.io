@@ -23,8 +23,8 @@ def build_item_template(data_local, item, var, html, broken):
     if var == 'url':
         while "$" in item[var]:
             for key in item:
-                item[var] = item[var].replace(u"${" + key+u"}", str(item[key])).replace(
-                    u"$" + key + "", str(item[key]))
+                item[var] = item[var].replace(u"${pkgname%-git}", str(item["pkgname"][0:-4]))
+                item[var] = item[var].replace(u"${" + key+u"}", str(item[key])).replace(u"$" + key + "", str(item[key]))
 
         html += '<strong>%s:</strong> <a  target="_blank" href=%s>%s</a><br>' \
                 % (var, item[var], item[var].replace("'", "").replace('"', ''))

@@ -52,7 +52,7 @@ def synchronize(metadata):
     for item_remote in data_remote:
         if not [item_local for item_local in data_local if
                 item_local["name"] == item_remote["name"]]:
-            if not item_remote["name"] == "KaOS-Community-Packages.github.io":
+            if not item_remote["name"] in ("KaOS-Community-Packages.github.io"):
                 new_item = dict(name=item_remote["name"],
                                 description=item_remote["description"],
                                 category="Others",
@@ -209,8 +209,7 @@ def generate_detail_html(item):
     html_item_detail += '<table cellpadding="10"><tr><td width="80%">'
 
     for var in (var for var in columns if var in item.keys()):
-        html_item_detail, broken = build_item_template(data_local, item, var, html_item_detail,
-                                                       broken)
+        html_item_detail, broken = build_item_template(data_local, item, var, html_item_detail,broken)
 
     if item['screenshot'][:4]=="http":
         screenshot = item['screenshot']
