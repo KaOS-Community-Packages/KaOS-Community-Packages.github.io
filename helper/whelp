@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.10"
+__VERSION__ = "0.8.11"
 
 import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -150,7 +150,7 @@ def generate_html(rapid=False):
         print "=================================="
         print "This can take a few minutes..."
 
-    text, broken_packages = "", []
+    text, text2, broken_packages = "","", []
 
     for i, item_local in enumerate(sorted(data_local, key=lambda k: k['stargazers_count'], reverse=True) ):
         item_local['i'] = i
@@ -159,11 +159,23 @@ def generate_html(rapid=False):
             brokenp = generate_detail_html(item_local)
             if brokenp:
                 broken_packages.append(brokenp)
+    for i, item_local in enumerate(
+            sorted(data_local, key=lambda k: k['pushed_at'], reverse=True)):
+        item_local['i'] = i
+        text2 += item_html % item_local
 
     with codecs.open('template.html', 'r', "utf-8") as infile, \
             codecs.open('../index.html', 'w', "utf-8") as outfile:
         for line in infile:
             line = line.replace("<item></item>", text)
+            line = line.replace("<date></date>", time.strftime("%Y-%m-%d"))
+            line = line.replace("<ver></ver>", __VERSION__)
+            outfile.write(line)
+
+    with codecs.open('template2.html', 'r', "utf-8") as infile, \
+            codecs.open('../index2.html', 'w', "utf-8") as outfile:
+        for line in infile:
+            line = line.replace("<item></item>", text2)
             line = line.replace("<date></date>", time.strftime("%Y-%m-%d"))
             line = line.replace("<ver></ver>", __VERSION__)
             outfile.write(line)
