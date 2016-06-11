@@ -1,0 +1,137 @@
+body {
+  background: #fff;
+  color: #666666;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5; }
+
+body, input, select, textarea, button {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300; }
+
+body {
+  background: #fff;
+  color: #666666;
+  margin: 0;
+   line-height: 1.5;
+  padding: 0;
+ }
+
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden; }
+
+.Hero {
+     margin-top: 20px;
+
+    background: #EDF0F2;
+    border: #fff;
+    border-width: 2px 0;
+    padding: 25px ;
+    color: #7E96B3;
+}
+.Header a {
+  color: #7E96B3;
+  text-decoration: none;
+  line-height: 1.5;
+  border-color: #CCD6E4;
+    font-size: 16px;
+  padding-bottom: 1px;
+  transition: border-color 0.2s, color 0.2s; }
+
+ .Header a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  border-color: #31A3DD;
+  color: #31A3DD; }
+.fa {
+  margin-right: 6px;
+  margin-top: 5px; }
+
+  a {
+  color: #7E96B3;
+  text-decoration: none;
+  line-height: 1.5;
+  border-color: #CCD6E4;
+  padding-bottom: 1px;
+  transition: border-color 0.2s, color 0.2s; }
+
+ a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  border-color: #31A3DD;
+  color: #31A3DD; }
+
+
+.Header-nav {
+  float: right;
+  margin-top: 8px; }
+
+
+.Header-nav h2 {
+  font-size: 36px;
+  color: #31A3DD;
+  font-weight: 300;
+  font-family: 'Raleway'; }
+
+code {
+  font-family: monospace;
+  color: #6EAF8B;
+  background: #F9FCFA; }
+
+.lead {
+  font-size: 120%; }
+
+.Button {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
+  border: 2px solid #CCD6E4;
+  border-radius: 6px;
+  padding: 15px 30px;
+  display: inline-block;
+  line-height: 1em; }
+
+
+
+.Hero h2 {
+  color: #536F90;
+  font-size: 35px;
+  font-family: 'Raleway';
+  font-weight: 500; }
+
+.Header-brand {
+  float: left;
+  margin: 0; }
+
+.Header-brand a {
+  border: 0; }
+
+.Header-brand img {
+  display: block;
+  margin: 0 auto; }
+
+
+
+.Header-nav a {
+  border: 0;
+  margin: 0 10px;
+  margin-bottom: 5px;
+  display: inline-block; }
+
+.Header-nav a.active {
+  color: #2c3e50; }
+.social_header {
+  padding-right: 20px;
+  text-align: right; }
+
+.social_header a {
+  color: #CCD6E4;
+  border-bottom: 0px solid;
+  font-size:16px; }
+
+.social_header a:hover {
+  color: #31A3DD; }

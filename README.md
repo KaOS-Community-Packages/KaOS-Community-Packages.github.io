@@ -11,7 +11,7 @@ To facilitate the maintenance and the updates of KCP-Center, it has created an a
 ```
 $ git clone https://github.com/KaOS-Community-Packages/KaOS-Community-Packages.github.io.git
 $ cd KaOS-Community-Packages.github.io/helper
-$ ./whelp -s
+$ ./whelp -sm
 $ cd ..
 $ git add .
 $ git commit -am "update web"
@@ -36,16 +36,16 @@ $ ./whelp -n "vscode" -c "Development"
 
 The categories availables are the following:
 
-- **AudioVideo**:	Applications for presenting, creating, or processing multimedia (audio/video)	 
-- **Development**:	Applications for development	 
-- **Education**:	Educational softwares	 
-- **Game**:	Games	 
-- **Graphics**:	Applications for viewing, creating, or processing graphics	 
-- **Network**:	Network applications such as a web browser	 
-- **Office**:	Applications for office	 
-- **Science**:	Scientific softwares	 
+- **AudioVideo**:	Applications for presenting, creating, or processing multimedia (audio/video)
+- **Development**:	Applications for development
+- **Education**:	Educational softwares
+- **Game**:	Games
+- **Graphics**:	Applications for viewing, creating, or processing graphics
+- **Network**:	Network applications such as a web browser
+- **Office**:	Applications for office
+- **Science**:	Scientific softwares
 - **Settings**:	Settings applications. The entries may appear in a separate menu or as part of a "Control Center"
-- **System**:	System applications, "System Tools" such like log viewers or network monitors	 
+- **System**:	System applications, "System Tools" such like log viewers or network monitors
 - **Utility**:	Small utility applications, "Accessories"
 
 
@@ -55,7 +55,7 @@ To assign a screenshot to package *vscode* we must run the next command:
 ```
 $ ./whelp -n "vscode" -ss "images/screenshots/vscode.jpg"
 ```
-Is important put first the image into the screenshots directory. The screenshot must be realized in jpg format and aproximatelly 550x500 px. 
+Is important put first the image into the screenshots directory. The screenshot must be realized in jpg format and aproximatelly 550x500 px.
 
 The screenshot's url also can be remote, like the next example:
 

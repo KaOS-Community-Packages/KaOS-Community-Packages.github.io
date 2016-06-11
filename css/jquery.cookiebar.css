@@ -1,4 +1,4 @@
-#cookie-bar {background:#bbbbbb; height:auto; line-height:24px; color:#111111; text-align:center; padding:10px 0; font-size:13px;}
+#cookie-bar {background:#edf0f2; height:auto; line-height:24px; color:#111111; text-align:center; padding:10px 0; font-size:13px;}
 #cookie-bar.fixed {position:fixed; top:0; left:0; width:100%;}
 #cookie-bar.fixed.bottom {bottom:0; top:auto;}
 #cookie-bar p {margin:0; padding:0;}

@@ -130,7 +130,7 @@ html {
 
 body {
     background: #f5f5f5 ;
-    font: 12px/1.5em Arial, Helvetica, sans-serif, "Arial Narrow";
+    font-size: 11px;
     color: #888888;
     overflow-y:scroll;
 }
@@ -175,7 +175,9 @@ a:hover {
 }
 
 .portfolio-categ {
+    margin-top: 20px;
     margin-bottom: 30px;
+    margin-left: 20px;
 }
 
 .portfolio-categ li {
@@ -219,7 +221,8 @@ a:hover {
 }
 
 li.active a {
-    text-decoration: underline;
+    color:#666666;
+    font-weight:bold;
 }
 
 .container-block {
@@ -245,6 +248,16 @@ li.ui-state-default:last-child {
 .right {
     position: absolute;
     right: 25px;
-    top:30px;
+    top:20px;
 ;
+}
+
+
+.srch  {
+    width: 190px;
+    padding: 3px 10px;
+    margin: 4px 2px;
+    border: 2px solid #CCD6E4;
+    border-radius: 6px;
+    line-height: 2em;
 }

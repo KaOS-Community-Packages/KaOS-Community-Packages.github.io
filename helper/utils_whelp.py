@@ -99,7 +99,7 @@ item_html = u'<li class="portfolio-item2" data-id="id-%(i)s" data-type="%(catego
               title="%(name)s: %(description)s"><img width="170" height="130" src="%(screenshot)s" \
             alt="%(name)s" title="%(name)s" ></a> </span> <div class="home-portfolio-text"> <h2 \
               class="post-title-portfolio"><a href="items/%(' \
-            u'name)s.html?iframe=true&width=1000&height=600""\
+            u'name)s.html?iframe=true&width=800&height=500""\
               rel="prettyPhoto[iframes]">%(name)s</a></h2> <p class="post-subtitle-portfolio">%(' \
             u'description)s </p> </div> </div></li>'
 

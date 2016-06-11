@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.8.11"
+__VERSION__ = "0.9.0"
 
 import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib
@@ -79,6 +79,7 @@ def synchronize(metadata):
         for item_remote in (item_remote for item_remote in data_remote if
                             item_remote["name"] == item_local["name"]):
             item_local["pushed_at"] = item_remote["pushed_at"]
+            item_local["stargazers_count"] = item_remote["stargazers_count"]
 
     if metadata:
         print "This can take a few minutes..."
@@ -223,12 +224,8 @@ def generate_detail_html(item):
     for var in (var for var in columns if var in item.keys()):
         html_item_detail, broken = build_item_template(data_local, item, var, html_item_detail,broken)
 
-    if item['screenshot'][:4]=="http":
-        screenshot = item['screenshot']
-    else:
-        screenshot ="../" + item['screenshot']
-    html_item_detail += '</td><td width="200px"><img style="border:1px solid #666666" width="200" height="150" ' \
-                        'src="%s"  title="%s"></td></tr></table>' % (screenshot,item['name'])
+
+    html_item_detail += '</td></table>'
 
     if broken:
         html_item_detail = '<b style="margin-left:700px;color:red;" >BROKEN</b>' + html_item_detail
