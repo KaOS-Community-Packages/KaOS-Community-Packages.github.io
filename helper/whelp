@@ -3,7 +3,7 @@
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.9.0"
+__VERSION__ = "0.9.1"
 
 import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
 import urllib2 as urllib

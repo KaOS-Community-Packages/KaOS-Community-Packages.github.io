@@ -90,7 +90,7 @@ def build_item_template(data_local, item, var, html, broken):
 
 broken_item_html = '<a href="%(name)s.html">%(name)s</a><br>'
 
-broken_html = "<h2  style='color:red;margin-left:-15px;margin-top:-20px;'><strong>Broken packages " \
+broken_html = "<h2  style='color:red;margin-left:-35px;margin-top:-20px;'><strong>Broken packages " \
               "[%s]</strong></h2><hr style='margin-left:-15px;margin-top:5px;'><br>"
 
 item_html = u'<li class="portfolio-item2" data-id="id-%(i)s" data-type="%(category)s" data-name' \
@@ -103,12 +103,7 @@ item_html = u'<li class="portfolio-item2" data-id="id-%(i)s" data-type="%(catego
               rel="prettyPhoto[iframes]">%(name)s</a></h2> <p class="post-subtitle-portfolio">%(' \
             u'description)s </p> </div> </div></li>'
 
-html_item_detail_head = '<h2  style="margin-left:-15px;margin-top:-20px;"><strong>%(name)s </strong> ' \
-                        '%(pkgver)s-%(pkgrel)s&nbsp;&nbsp;&nbsp;&nbsp;<iframe align="center" ' \
-                        'src="https://ghbtns.com/github-btn.html?user=KaOS-Community-Packages' \
-                        '&repo=%(name)s&type=star&count=true" ' \
-                        'frameborder="0" scrolling="0" width="170px" height="20px"></iframe></h2> <hr ' \
-                        'style="margin-left:-15px;margin-top:5px;"><br>'
+html_item_detail_head = '<h2  style="margin-left:-15px;margin-top:-20px;"><strong>%(name)s </strong>%(pkgver)s-%(pkgrel)s&nbsp;&nbsp;&nbsp;&nbsp;</h2><h4 style="  position: absolute;left:580px;top:0;vertical-align: middle;"><a href="https://github.com/KaOS-Community-Packages/%(name)s"  target="_blank">View on GitHub&nbsp;<img src="../images/github.png" width="22" height="22"></a></h4><hr style="margin-left:-15px;margin-top:5px;"><br>'
 
 private_keys = "&client_id=e43da6309b975672c1eb" \
                "&client_secret=e362ddd7f374c69f2709c2af24b2d7f8e539cce7"
