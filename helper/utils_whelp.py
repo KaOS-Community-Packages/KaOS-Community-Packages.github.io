@@ -116,7 +116,7 @@ html_item_detail_buttons = u'<div class="container-block"><div class=" text-cent
                            u'addition of the package “kcp”. You can click the button to copy the required' \
                            u' command kcp and paste it into your console.</td><td ' \
                            u'width="5%%"></td><td style="vertical-align: mid;" width="20%%"><a class="btn button ' \
-                           u'big" data-clipboard-text="kcp -i %(name)s" title="click to copy to ' \
+                           u'big" data-clipboard-text="kcp -u && kcp -i %(name)s" title="click to copy to ' \
                            u'clipboard">Copy command</a></td></tr></table></li></ul><ul ' \
                            u'style="margin-left: 14px"> <strong>ZIP file</strong><li ' \
                            u'class="ui-state-default"><table style="width:100%%"><tr><td ' \
