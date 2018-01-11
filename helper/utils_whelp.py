@@ -61,9 +61,9 @@ def build_item_template(data_local, item, var, html, broken):
                     broken = True
         html += "<br>"
 
-    elif var == 'requerid_by':
+    elif var == 'required_by':
         req = False
-        html_prov = '<strong>requerid by: </strong>'
+        html_prov = '<strong>required by: </strong>'
         for item_local in data_local:
             if 'depends' in item_local:
                 for dep in item_local['depends'].split():
