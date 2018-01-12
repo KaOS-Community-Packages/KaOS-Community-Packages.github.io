@@ -216,9 +216,9 @@ def generate_detail_html(item):
         html_item_detail = html_item_detail_head % (dict(name=item['name'], pkgver="", pkgrel=""))
 
     columns = ['description', 'url', 'license', 'depends', 'makedepends',
-               'requerid_by', 'created_at', 'pushed_at']
+               'required_by', 'created_at', 'pushed_at']
 
-    item['requerid_by'], broken = [], ""
+    item['required_by'], broken = [], ""
     html_item_detail += '<table cellpadding="10"><tr><td width="80%">'
 
     for var in (var for var in columns if var in item.keys()):
