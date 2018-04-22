@@ -12,7 +12,7 @@ from utils_whelp import private_keys, data_local,  item_html, broken_html, \
 
 
 def get_repos_kcp():
-    url_kcp = "https://api.github.com/orgs/KaOS-Community-Packages/repos?page=%s&per_page=%s" + \
+    url_kcp = "http://api.github.com/orgs/KaOS-Community-Packages/repos?page=%s&per_page=%s" + \
               private_keys
     per_page = 100
     repos, page = [], 1
@@ -36,7 +36,7 @@ def get_repos_kcp():
 
 
 def get_repos_kaos():
-    url_kaosx = "https://api.github.com/repos/kaosx/%s/git/trees/master?" + private_keys
+    url_kaosx = "http://api.github.com/repos/kaosx/%s/git/trees/master?" + private_keys
     repos_kaos = {}
 
     for kaosx in ['core', 'main', 'apps']:
