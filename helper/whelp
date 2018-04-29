@@ -5,11 +5,14 @@
 
 __VERSION__ = "0.9.2"
 
-import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time
+import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time, ssl
 import urllib2 as urllib
 from utils_whelp import private_keys, data_local,  item_html, broken_html, \
     broken_item_html, build_item_template, html_item_detail_buttons, html_item_detail_head
 
+if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+    getattr(ssl, '_create_unverified_context', None)):
+    ssl._create_default_https_context = ssl._create_unverified_context
 
 def get_repos_kcp():
     url_kcp = "http://api.github.com/orgs/KaOS-Community-Packages/repos?page=%s&per_page=%s" + \
