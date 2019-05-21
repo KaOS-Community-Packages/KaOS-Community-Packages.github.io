@@ -6,4 +6,4 @@ cd ..
 git add images/.
 git add items/.
 git commit -am "update web"
-#git push
+git push
