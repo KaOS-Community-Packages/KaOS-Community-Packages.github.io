@@ -2,11 +2,11 @@
 
 ## What is KCP-Center?
 
-The KCP-Center is a web site hosted on Github, it allow to explore -and in a more visually way- all the packages existing in KCP, the community repository maintained by the KaOS users. The packages are classified by categories in order to facilitate the search. You can also access the descriptive meta-data of each package and view a screenshot of the app running. You can access the website at: [KaOS-Community-Packages.github.io](http://KaOS-Community-Packages.github.io)
+The KCP-Center is a web site hosted on Github, that allows us to explore - in a visually pleasing way - all the existing packages in KCP, the community repository maintained by the KaOS users. The packages are classified by categories in order to facilitate the search. You can also access the descriptive meta-data of each package and view a screenshot of the app. You can access the website at: [KaOS-Community-Packages.github.io](http://KaOS-Community-Packages.github.io)
 
 
 ### WHELP helper
-To facilitate the maintenance and the updates of KCP-Center, it has created an assistant, which is a script in python called *whelp* that allow to keep synchronized the website with the repository of the KCP's packages. Between the posibilities allowed by the whelp is assign a category or a screenshot to any package, besides to capture automatically its meta-data. The tools *git* and *whelp* combinated allow to update in an easy way any look of the website such the next example:
+To facilitate the maintenance and the updates of KCP-Center, it has created an assistant, which is a script in python called *whelp* that allows to keep the website synchronized with the repository of the KCP's packages. One of the possibilities allowed by whelp is to assign a category or a screenshot to any package, besides to capture its meta-data automatically. The tools *git* and *whelp* combinated allow to update the website in an easy way, such as in this example:
 
 ```
 $ git clone https://github.com/KaOS-Community-Packages/KaOS-Community-Packages.github.io.git
@@ -17,7 +17,7 @@ $ git add .
 $ git commit -am "update web"
 $ git push
 ```
-Important: The assistent *whelp* must be runned always inside the directory *helper*
+Important: The assistent *whelp* must always run inside the directory *helper*
 
 
 #### Syncronize
@@ -92,6 +92,6 @@ $ git commit -am "update web"
 $ git push
 ```
 
-You can test locally the KCP-Center before up it at github opening the file *index.html* in your favourite web-browser.
+You can test the KCP-Center locally before you commit it, by opening the file *index.html* in your favourite web-browser.
 
 
