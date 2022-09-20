@@ -1,12 +1,13 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """whelp: a command line helper for simplify KCP-center update"""
 
-__VERSION__ = "0.9.2"
+__VERSION__ = "0.9.3"
 
-import os, sys, json, argparse, codecs, ConfigParser, StringIO, re, textwrap, time, ssl
-import urllib2 as urllib
+import os, sys, json, argparse, codecs, configparser, re, textwrap, time, ssl
+from io import StringIO
+from urllib.request import urlopen
 from utils_whelp import private_keys, data_local,  item_html, broken_html, \
     broken_item_html, build_item_template, html_item_detail_buttons, html_item_detail_head
 
@@ -21,19 +22,19 @@ def get_repos_kcp():
     repos, page = [], 1
 
     while True:
-        print "Repositories kcp: range(%s-%s)" % ((page - 1) * per_page, page * per_page)
-        partial_repos = json.loads(urllib.urlopen(url_kcp % (page, per_page)).read())
+        print("Repositories kcp: range(%s-%s)" % ((page - 1) * per_page, page * per_page))
+        partial_repos = json.loads(urlopen(url_kcp % (page, per_page)).read())
         repos += partial_repos
         page += 1
         if len(partial_repos) < per_page:
             if type(partial_repos) is dict:
-                print "API rate limit exceeded"
+                print("API rate limit exceeded")
                 sys.exit()
             break
 
     if len(repos) > 0:
-        print "=================================="
-        print "Total-repositories: %s" % (len(repos))
+        print("==================================")
+        print("Total-repositories: %s" % (len(repos)))
 
     return repos
 
@@ -43,9 +44,9 @@ def get_repos_kaos():
     repos_kaos = {}
 
     for kaosx in ['core', 'main', 'apps']:
-        partial = json.loads(urllib.urlopen(url_kaosx % kaosx).read())
+        partial = json.loads(urlopen(url_kaosx % kaosx).read())
         repos_kaos[kaosx] = [item['path'] for item in partial['tree']]
-        print "Repositories kaos: %s" % kaosx
+        print("Repositories kaos: %s" % kaosx)
 
     return repos_kaos
 
@@ -68,12 +69,12 @@ def synchronize(metadata):
                     new_item[key] = value
                 data_local.insert(0, new_item)
                 generate_html_item(new_item["name"])
-                print "Add: ", new_item["name"]
+                print("Add: ", new_item["name"])
 
     for item_local in data_local:
         if not [item_remote for item_remote in data_remote if item_remote["name"] ==
                 item_local["name"]]:
-            print "Del: ", item_local["name"]
+            print("Del: ", item_local["name"])
             data_local.remove(item_local)
             try:
                 os.remove("../items/%s.htm" % item_local["name"])
@@ -85,11 +86,11 @@ def synchronize(metadata):
             item_local["stargazers_count"] = item_remote["stargazers_count"]
 
     if metadata:
-        print "This can take a few minutes..."
+        print("This can take a few minutes...")
         for item_local in data_local:
             for key, value in parser_pkg(item_local["name"]).iteritems():
                 item_local[key] = value
-            print "get metadata %s" % item_local['name']
+            print("get metadata %s" % item_local['name'])
 
     with open('data.json', 'w') as outfile:
         json.dump(data_local, outfile)
@@ -99,23 +100,23 @@ def set_value(name, var, value):
     try:
         list_item = list(item_local for item_local in data_local if item_local["name"] == name)
         if not list_item:
-            print "error: the package [%s] not exists" % name
+            print("error: the package [%s] not exists" % name)
             sys.exit()
         for item in list_item:
             item[var] = value
             with open('data.json', 'w') as outfile:
                 json.dump(data_local, outfile)
 
-            print "New %s for %s: %s" % (var, name, value)
+            print("New %s for %s: %s" % (var, name, value))
     except:
-        print "Error in set new %s" % var
+        print("Error in set new %s" % var)
 
 
 def get_metadata(name):
     list_item = list(item_local for item_local in data_local if item_local["name"] == name)
 
     if not list_item:
-        print "error: the package [%s] not exists" % name
+        print("error: the package [%s] not exists" % name)
         sys.exit()
 
     for item in list_item:
@@ -123,9 +124,9 @@ def get_metadata(name):
             item[key] = value
         with open('data.json', 'w') as outfile:
             json.dump(data_local, outfile)
-        print "=================================="
-        print "Metadata completed for %s" % name
-        print "=================================="
+        print("==================================")
+        print("Metadata completed for %s" % name)
+        print("==================================")
 
 
 def print_item(name):
@@ -133,26 +134,26 @@ def print_item(name):
         list_item = list(item_local for item_local in data_local if
                          item_local["name"] == name)
         if not list_item:
-            print "error: the package [%s] not exists" % (name)
+            print("error: the package [%s] not exists" % (name))
         for item in list_item:
-            print "=================================="
-            print "name: %s" % item['name']
-            print "description: %s" % item['description']
-            print "category: %s" % item['category']
-            print "screenshot: %s" % item['screenshot']
-            print "=================================="
+            print("==================================")
+            print("name: %s" % item['name'])
+            print("description: %s" % item['description'])
+            print("category: %s" % item['category'])
+            print("screenshot: %s" % item['screenshot'])
+            print("==================================")
     except:
-        print "Error in print data of package"
+        print("Error in print data of package")
         sys.exit()
 
 
 def generate_html(rapid=False):
     # try:
     if not rapid:
-        print "=================================="
-        print "Rebuild HTML start!!!"
-        print "=================================="
-        print "This can take a few minutes..."
+        print("==================================")
+        print("Rebuild HTML start!!!")
+        print("==================================")
+        print("This can take a few minutes...")
 
     text, text2, broken_packages = "","", []
 
@@ -195,23 +196,23 @@ def generate_html(rapid=False):
                 line = line.replace("<item></item>", html_item_broken)
                 outfile.write(line)
 
-    print "=================================="
-    print "Rebuild HTML completed!!!"
-    print "=================================="
+    print("==================================")
+    print("Rebuild HTML completed!!!")
+    print("==================================")
 
 
 def generate_html_item(name):
     for item_local in (item_local for item_local in data_local if
                        item_local["name"] == name):
         generate_detail_html(item_local)
-        print "=================================="
-        print "Rebuild HTML %s completed!!!" % (item_local['name'])
-        print "=================================="
+        print("==================================")
+        print("Rebuild HTML %s completed!!!" % (item_local['name']))
+        print("==================================")
         return
 
 
 def generate_detail_html(item):
-    print item['name']
+    print(item['name'])
 
     if 'pkgver' in item.keys() and 'pkgrel' in item.keys():
         html_item_detail = html_item_detail_head % item
@@ -232,7 +233,7 @@ def generate_detail_html(item):
 
     if broken:
         html_item_detail = '<b style="margin-left:700px;color:red;" >BROKEN</b>' + html_item_detail
-        print "Detected broken package: %s" % item['name']
+        print("Detected broken package: %s" % item['name'])
     else:
         html_item_detail += html_item_detail_buttons % item
 
@@ -251,12 +252,12 @@ def generate_detail_html(item):
 def parser_pkg(name):
     try:
         url = "https://raw.githubusercontent.com/KaOS-Community-Packages/%s/master/PKGBUILD"
-        ini_str = '[pkg]\n' + urllib.urlopen(url % name).read()
+        ini_str = '[pkg]\n' + urlopen(url % name).read()
         for str_func in ['pkgver', 'check', 'prepare', 'build', 'package']:
             ini_str = re.sub(str_func + '.*\((.|\n)*', '', ini_str)
             ini_str = ini_str.replace("(\n", "(").replace("\n)", ")")
         ini_fp = StringIO.StringIO(ini_str)
-        config = ConfigParser.RawConfigParser()
+        config = configparser.RawConfigParser()
         config.readfp(ini_fp)
         return dict(config.items('pkg'))
     except:
@@ -321,7 +322,7 @@ def main():
         set_value(args.package, 'screenshot', args.screenshot)
         generate_html(True)
     else:
-        print "error: expected one argument"
+        print("error: expected one argument")
         sys.exit()
 
 
