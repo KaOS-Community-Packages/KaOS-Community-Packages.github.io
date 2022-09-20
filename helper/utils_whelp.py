@@ -67,6 +67,7 @@ def synchronize():
             new_item['pkgdesc']     = new_item['description']
             new_item['description'] = item['description']
             new_item['screenshot']  = item['screenshot']
+            new_item.pop('local_version', None)
             new_data.append(new_item)
         else:
             deleted += 1
