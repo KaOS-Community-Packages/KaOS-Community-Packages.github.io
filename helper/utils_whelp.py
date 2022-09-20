@@ -17,6 +17,11 @@ def get_data_local():
 data_local = get_data_local()
 
 
+def print_title(*argv):
+    print("==================================")
+    print(message) for message in argv
+    print("==================================")
+
 def build_item_template(data_local, item, var, html, broken):
 
 

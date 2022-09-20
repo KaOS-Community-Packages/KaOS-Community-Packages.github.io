@@ -9,7 +9,7 @@ import os, sys, json, argparse, codecs, configparser, re, textwrap, time, ssl
 from io import StringIO
 from urllib.request import urlopen
 from utils_whelp import private_keys, data_local,  item_html, broken_html, \
-    broken_item_html, build_item_template, html_item_detail_buttons, html_item_detail_head
+    broken_item_html, build_item_template, html_item_detail_buttons, html_item_detail_head, print_title
 
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
     getattr(ssl, '_create_unverified_context', None)):
@@ -33,8 +33,7 @@ def get_repos_kcp():
             break
 
     if len(repos) > 0:
-        print("==================================")
-        print("Total-repositories: %s" % (len(repos)))
+        print_title("Total-repositories: %s" % (len(repos)))
 
     return repos
 
@@ -124,9 +123,7 @@ def get_metadata(name):
             item[key] = value
         with open('data.json', 'w') as outfile:
             json.dump(data_local, outfile)
-        print("==================================")
-        print("Metadata completed for %s" % name)
-        print("==================================")
+        print_title("Metadata completed for %s" % name)
 
 
 def print_item(name):
@@ -136,12 +133,7 @@ def print_item(name):
         if not list_item:
             print("error: the package [%s] not exists" % (name))
         for item in list_item:
-            print("==================================")
-            print("name: %s" % item['name'])
-            print("description: %s" % item['description'])
-            print("category: %s" % item['category'])
-            print("screenshot: %s" % item['screenshot'])
-            print("==================================")
+            print_title("name: %s" % item['name'], "description: %s" % item['description'], "category: %s" % item['category'], "screenshot: %s" % item['screenshot'])
     except:
         print("Error in print data of package")
         sys.exit()
@@ -150,9 +142,7 @@ def print_item(name):
 def generate_html(rapid=False):
     # try:
     if not rapid:
-        print("==================================")
-        print("Rebuild HTML start!!!")
-        print("==================================")
+        print_title("Rebuild HTML start!!!")
         print("This can take a few minutes...")
 
     text, text2, broken_packages = "","", []
@@ -196,18 +186,14 @@ def generate_html(rapid=False):
                 line = line.replace("<item></item>", html_item_broken)
                 outfile.write(line)
 
-    print("==================================")
-    print("Rebuild HTML completed!!!")
-    print("==================================")
+    print_title("Rebuild HTML completed!!!")
 
 
 def generate_html_item(name):
     for item_local in (item_local for item_local in data_local if
                        item_local["name"] == name):
         generate_detail_html(item_local)
-        print("==================================")
-        print("Rebuild HTML %s completed!!!" % (item_local['name']))
-        print("==================================")
+        print_title("Rebuild HTML %s completed!!!" % (item_local['name']))
         return
 
 
