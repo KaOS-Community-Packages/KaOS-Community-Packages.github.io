@@ -27,10 +27,11 @@ td {
     padding: 0
 }
 
-h4{
+h4 {
     margin: 2px;
     padding: 0
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0
@@ -260,4 +261,81 @@ li.ui-state-default:last-child {
     border: 2px solid #CCD6E4;
     border-radius: 6px;
     line-height: 2em;
+}
+
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    opacity: 0.8;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 20% auto;
+    border-radius: 25px;
+}
+
+.modal-header{
+}
+
+.modal-body {
+}
+
+.modal-footer {
+    margin: 10px 0 2px 0;
+}
+
+.button_close {
+    width: 75px;
+    height: 22px;
+    background: url("../images/prettyPhoto/light_rounded/sprite.png") -1px -1px no-repeat;
+    line-height: 22px;
+    float: right;
+}
+
+.button_close:hover {
+    cursor: pointer;
+}
+
+.pagination {
+    clear: left;
+    float: left;
+    margin-top: 3px;
+}
+
+.pagination > .text {
+    float: left;
+    margin: 2px 4px;
+}
+
+.pagination > .arrow {
+    float: left;
+    width: 15px;
+    height: 14px;
+    margin-top: 3px;
+    overflow: hidden;
+}
+
+.pagination > .arrow.left {
+    background: url('../images/prettyPhoto/light_rounded/sprite.png') 0 -71px no-repeat;
+}
+
+.pagination > .arrow.left.disabled {
+    background-position: 0 -87px;
+}
+
+.pagination > .arrow.right {
+    background: url('../images/prettyPhoto/light_rounded/sprite.png') -22px -71px no-repeat;
+}
+
+.pagination > .arrow.right.disabled {
+    background-position: -22px -87px;
 }
