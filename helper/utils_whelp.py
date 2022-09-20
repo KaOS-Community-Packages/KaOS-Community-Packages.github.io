@@ -4,23 +4,118 @@
 from subprocess import Popen, PIPE
 import re
 import json
+import os
+import sys
 import ast
 import datetime
 
+def read_json(filepath):
+    data = []
+    with open(filepath) as data_file:
+        data = json.load(data_file)
+    return data
 
-def get_data_local():
-    data_local = []
-    with open('data.json') as data_file:
-        data_local = json.load(data_file)
-    return data_local
+def write_json(data, filepath):
+    with open(filepath, 'w') as data_file:
+        json.dump(data, data_file)
 
-data_local = get_data_local()
+def index_list_by_name(data):
+    index = {}
+    for item in data:
+        index[item['name']] = item
+    return index
 
+def get_item(data, nama):
+    return list(item for item in data if item['name'] == name)
+
+
+def update_remote_repo():
+    os.system('kcp -u')
+
+def get_kcp_path():
+    return os.path.join(os.environ.get('HOME'), '.config', 'kcp', 'kcp.json')
 
 def print_title(*argv):
     print("==================================")
-    print(message) for message in argv
+    for message in argv:
+        print(message)
     print("==================================")
+
+local_file = 'data.json'
+kcp_file   = get_kcp_path()
+
+def synchronize():
+    print_title('Refresh KCP database…')
+    update_remote_repo()
+
+    data_local   = read_json(local_file)
+    data_remote  = read_json(kcp_file)['packages']
+    index_local  = index_list_by_name(data_local)
+    index_remote = index_list_by_name(data_remote)
+
+    print_title('Update local database…')
+    created = 0
+    updated = 0
+    deleted = 0
+    new_data = []
+    for item in data_local:
+        if item['name'] in data_remote:
+            updated += 1
+            print('Update: %s' % item['name'])
+            new_item                = data_remote[item[name]].copy()
+            new_item['category']    = item['category']
+            new_item['pkgdesc']     = new_item['description']
+            new_item['description'] = item['description']
+            new_item['screenshot']  = item['screenshot']
+            new_data.append(new_item)
+        else:
+            deleted += 1
+            print('Del: %s' % item['name'])
+    for item in data_remote:
+        created += 1
+        print('Add: %s' % item['name'])
+        new_item               = item.copy()
+        new_item['category']   = 'others'
+        new_item['pkgdesc']    = item['description']
+        new_item['screenshot'] = 'images/big.png'
+        new_data.append(new_item)
+
+    print_title('Save local database…')
+    write_json(data, local_file)
+
+def set_value(name, var, value):
+    data_local = read_json(kcp_file)
+
+    try:
+        list_item = get_item(data_local, name)
+        if not list_item:
+            print('error: the package [%s] doesn’t exist' % name)
+            sys.exit()
+        for item in list_item:
+            item[var] = value
+        write_json(data_local, local_file)
+    except:
+        print('Error in setting new %s' % var)
+
+def print_item(name):
+    data_local = read_json(local_file)
+
+    try:
+        list_item = get_item(data_local, name)
+        if not list_item:
+            print('error: the package [%s] doesn’t exist' % name)
+            sys.exit()
+        for item in list_item:
+            name        = 'name       : %s' % item['name']
+            description = 'description: %s' % item['description']
+            category    = 'category   : %s' % item['category']
+            screenshot  = 'screenshot : %s' % item['screenshot']
+            print_title(name, description, category, screenshot)
+    except:
+        print('Error in printing data of %' % name)
+
+
+data_local = read_json('data.json')
 
 def build_item_template(data_local, item, var, html, broken):
 
