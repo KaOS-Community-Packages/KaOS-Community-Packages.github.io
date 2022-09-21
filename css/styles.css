@@ -181,7 +181,13 @@ a:hover {
     margin-left: 20px;
 }
 
-.portfolio-categ li {
+.portfolio-sort {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.portfolio-categ li, .portfolio-sort li {
     display: inline;
     margin-right: 10px;
     font-size: 13px;

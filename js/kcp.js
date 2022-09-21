@@ -71,8 +71,8 @@ const KCP = {
     State: {
         data: null,
         dataSelected: null,
-        category: '',
-        sortBy: '',
+        category: 'All',
+        sortBy: 'Popularity',
         search: '',
         modal: null,
         typeModal: null,
@@ -131,7 +131,7 @@ const KCP = {
                 return m(`li.${cls}`, m(m.route.Link, {
                     selector: 'a',
                     href: route,
-                }));
+                }, label));
             };
             view: function(vnode) {
                 return m('ul.portfolio-categ.filter', [
@@ -141,8 +141,25 @@ const KCP = {
             },
         },
         sortBar: {
+            sorts: [
+                'Popularity',
+                'Updated',
+                'Name',
+            ],
+            viewItem: function(vnode, label) {
+                const s = KCP.state;
+                let selector = label === vnode.attrs.current ? 'li.active' : 'li';
+                const route = KCP.getRoute(s.category, label, s.search, s.modal, s.typeModal);
+                return m(selector, m(m.route.Link, {
+                    selector: 'a',
+                    href: route,
+                }, label));
+            },
             view: function(vnode) {
-                return '';
+                return m('ul.portfolio-sort.filter', [
+                    m('li', 'Sort by:'),
+                    vnode.state.sorts.map(label => vnode.state.viewItem(vnode, label)),
+                ]);
             },
         },
         item: {
