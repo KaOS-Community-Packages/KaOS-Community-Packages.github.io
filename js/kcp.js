@@ -76,6 +76,7 @@ const KCP = {
         search: '',
         modal: null,
         typeModal: null,
+        noticeViewed: false,
     },
 
     Component: {
@@ -127,7 +128,7 @@ const KCP = {
                 if (label === vnode.attrs.current) {
                     cls += '.active';
                 }
-                const route = KCP.getRoute(label, s.sortBy, s.search, s.modal, s.typeModal);
+                const route = KCP.getRoute(label, s.sortBy, s.search);
                 return m(`li.${cls}`, m(m.route.Link, {
                     selector: 'a',
                     href: route,
@@ -149,7 +150,7 @@ const KCP = {
             viewItem: function(vnode, label) {
                 const s = KCP.state;
                 let selector = label === vnode.attrs.current ? 'li.active' : 'li';
-                const route = KCP.getRoute(s.category, label, s.search, s.modal, s.typeModal);
+                const route = KCP.getRoute(s.category, label, s.search);
                 return m(selector, m(m.route.Link, {
                     selector: 'a',
                     href: route,
@@ -175,6 +176,24 @@ const KCP = {
         modal: {
             view: function(vnode) {
                 return '';
+            },
+        },
+        noticeBar: {
+            view: function(vnode) {
+                return m(KCP.State.noticeViewed ? '#notice.hidden' : '#notice', m('p', [
+                    'KaOS users maintained set of files to easily build extra packages. ',
+                    m('b', 'Use any of these files at your own risk'),
+                    m('br'),
+                    'Make sure to check the correctness of any package, check for updates, and rebuild when changes in the KaOS repositories demands a rebuild of your package(s).',
+                    m('br'),
+                    m('a', {
+                        href: '',
+                        onclick: (ev) => {
+                            ev.preventDefault();
+                            KCP.State.noticeViewed = true;
+                            //document.getElementById('notice').classList.add('hidden');
+                        },
+                    }, 'I Understand',
             },
         },
     },
