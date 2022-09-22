@@ -6,12 +6,20 @@ const KCP = {
         return (e1 > e2) ? 1 : -1;
     },
     filter: function (data, category, sortBy, search) {
-        let filteredData = data;
+        let filteredData = [...data.packages];
         if (data === null) {
             return filteredData;
         }
-        if (!!category && category !== 'All') {
-            filteredData = filteredData.filter(item => item.category === category);
+        switch (category) {
+            case '':
+            case 'All':
+                break;
+            case 'Broken':
+                filteredData = filteredData.filter(item => Array.isArray(item.broken) && item.broken.length > 0);
+                break;
+            default:
+                filteredData = filteredData.filter(item => item.category === category);
+                break;
         }
         if (!!search) {
             search = search.toLowerCase();
