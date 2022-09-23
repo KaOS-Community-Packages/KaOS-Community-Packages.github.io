@@ -1,4 +1,22 @@
 const KCP = {
+    fetch: function(url, result) {
+        let result = {};
+        return m.request({
+            url: url,
+            method: 'GET',
+        })
+            .then(response => result.data = response)
+            .catch(response => result.error = response)
+        ;
+    },
+    loadData: async function() {
+        let result = {};
+        await KCP.fetch('helper/data.json', result);
+        if (!result.error) {
+            KCP.State.data = result.data;
+            KCP.State.dataloaded = true;
+        }
+    },
     compare: function (e1, e2) {
         if (e1 == e2) {
             return 0;
@@ -84,7 +102,9 @@ const KCP = {
 
     State: {
         data: null,
+        dataloaded: false,
         dataSelected: null,
+        dataIndex: null,
         category: 'All',
         sortBy: 'Popularity',
         search: '',
@@ -347,7 +367,7 @@ const KCP = {
         },
         noticeBar: {
             view: function(vnode) {
-                return m(KCP.State.noticeViewed ? '#notice.hidden' : '#notice', m('p', [
+                return m(KCP.State.noticeViewed ? '.notice.hidden' : '.notice', m('p', [
                     'KaOS users maintained set of files to easily build extra packages. ',
                     m('b', 'Use any of these files at your own risk'),
                     m('br'),
@@ -368,8 +388,67 @@ const KCP = {
 
     Route: {
         '/': {
+            filter: function(vnode) {
+                const s = KCP.State;
+                const a = vnode.attrs;
+                if (!s.dataloaded) {
+                    return;
+                }
+                s.dataFiltered = KCP.filter(s.data, s.category, s.sortBy, s.search);
+                s.category     = a.category;
+                s.sortBy       = a.sortBy;
+                s.search       = a.search;
+                s.modal        = a.modal;
+                s.typeModal    = a.type;
+                if (!!s.modal) {
+                    s.dataSelected = s.data.packages.find(p => p.name === s.modal);
+                    s.dataIndex    = s.dataFiltered.findIndex(p => p.name === s.modal);
+                    if (s.dataIndex < 0) {
+                        s.dataIndex = null;
+                    }
+                } else {
+                    s.dataIndex    = null;
+                    s.dataSelected = null;
+                }
+            },
+            oninit: function (vnode) {
+                const s = KCP.State;
+                if (!s.dataloaded) {
+                    KCP.loadData().then(() => vnode.state.filter(vnode));
+                }
+            },
             view: function(vnode) {
-                return '';
+                const s = KCP.State
+                const c = KCP.Component;
+                if (!s.dataloaded) {
+                    return '';
+                }
+                let modal = '';
+                if (!!s.modal) {
+                    const params = {
+                        type: s.typeModal,
+                        data: s.dataSelected,
+                        total: s.filteredData.length,
+                    };
+                    if (!isNaN(s.dataIndex) && s.dataIndex >= 0) {
+                        params.index = s.dataIndex;
+                        if (s.dataIndex > 0) {
+                            params.prev = s.filteredData[s.dataIndex - 1].name;
+                        }
+                        if (s.dataIndex < s.filteredData.length - 1) {
+                            params.next = s.filteredData[s.dataIndex + 1].name;
+                        }
+                    }
+                    modal = m(c.modal, params);
+                }
+                return [
+                    m(c.searchBar, {value: s.search}),
+                    m(c.categoryBar, {current: s.category}),
+                    m(c.sortBar, {current: s.sortBy}),
+                    m(c.list, {data: s.dataFiltered}),
+                    modal,
+                    m(c.noticeBar),
+                ];
             },
         },
         '/:404': {
@@ -381,7 +460,9 @@ const KCP = {
 };
 
 const searchBar = document.querySelector('header.Hero');
+const noticeBar = document.getElementById('#notice');
 const root      = document.querySelector('.wrapper');
 
 m.mount(searchBar, KCP.Component.searchBar);
+m.mount(noticeBar, KCP.Component.noticeBar);
 m.route(root, '/', KCP.Route);
