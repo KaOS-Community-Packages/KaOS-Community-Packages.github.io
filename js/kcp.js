@@ -48,7 +48,13 @@ const KCP = {
         }
         return filteredData;
     },
-    getParams: function(category, sortBy, search, modal, typeModal) {
+    getParams: function(data) {
+        const s = KCP.State;
+        const category  = typeof data.category === 'undefined' ? s.category : data.category;
+        const sortBy    = typeof data.sortBy === 'undefined' ? s.sortBy : data.sortBy;
+        const search    = typeof data.search === 'undefined' ? s.search : data.search;
+        const modal     = typeof data.modal === 'undefined' ? s.modal : data.modal;
+        const typeModal = typeof data.typeModal === 'undefined' ? s.typeModal : data.typeModal;
         const params = {};
         if (!!category && category !== 'All') {
             params.category = category;
@@ -67,13 +73,13 @@ const KCP = {
         }
         return params;
     },
-    getRoute: function(category, sortBy, search, modal, typeModal) {
-        const strParams = m.buildQueryString(KCP.getParams(category, sortBy, search, modal, typeModal));
+    getRoute: function(data) {
+        const strParams = m.buildQueryString(KCP.getParams(data));
         return `/?${strParams}`;
     },
     refreshRoute: function() {
         const s = KCP.State;
-        m.route.set('/', KCP.getParams(s.category, s.sortBy, s.search, s.modal, s.typeModal));
+        m.route.set('/', KCP.getParams({}));
     },
 
     State: {
@@ -131,15 +137,14 @@ const KCP = {
                 Broken: 'Broken',
             },
             viewItem: function(vnode, label) {
-                const s = KCP.State;
                 let cls = vnode.state.categories[label];
                 if (label === vnode.attrs.current) {
                     cls += '.active';
                 }
-                const route = KCP.getRoute(label, s.sortBy, s.search);
                 return m(`li.${cls}`, m(m.route.Link, {
                     selector: 'a',
-                    href: route,
+                    href: '/',
+                    params: KCP.getParams({category: label}),
                 }, label));
             },
             view: function(vnode) {
@@ -156,12 +161,11 @@ const KCP = {
                 'Name',
             ],
             viewItem: function(vnode, label) {
-                const s = KCP.state;
                 let selector = label === vnode.attrs.current ? 'li.active' : 'li';
-                const route = KCP.getRoute(s.category, label, s.search);
                 return m(selector, m(m.route.Link, {
                     selector: 'a',
-                    href: route,
+                    href: '/',
+                    params: KCP.getParams({sortBy: label}),
                 }, label));
             },
             view: function(vnode) {
@@ -174,13 +178,13 @@ const KCP = {
         item: {
             view: function(vnode) {
                 const item        = vnode.attrs.data;
-                const s           = KCP.State;
-                const routeImg    = KCP.getRoute(s.category, s.sortBy, s.search, item.name, 'screenshot');
-                const routeDetail = KCP.getRoute(s.category, s.sortBy, s.search, item.name);
+                const paramImg    = KCP.getParams({modal: item.name, typeModal: 'screenshot'});
+                const paramDetail = KCP.getParams({modal: item.name});
                 return m('li.portfolie-item2', m('div', [
                     m('span.image-block', m(m.route.Link, {
                         selector: 'a.image-zoom',
-                        href: routeImg,
+                        href: '/',
+                        params: paramImg,
                         title: item.description,
                     }, [
                         m('img', {
@@ -193,7 +197,8 @@ const KCP = {
                         m('.home-portfolio.text', [
                             m('h2.post-title-portfolio', m(m.route.Link, {
                                 selector: 'a',
-                                href: routeDetail,
+                                href: '/',
+                                params: paramDetail,
                                 title: item.description,
                             }, item.name)),
                             m('p.post-subtitle-portfolio', item.description),
@@ -208,7 +213,130 @@ const KCP = {
             },
         },
         modal: {
+            viewImg: function(item) {
+                return m('.modal-body', [
+                    m('.modal-img', [
+                        m('a', {
+                            href: item.screenshot,
+                            target: '_blank',
+                            title: 'Expand the image',
+                        }, 'Expand'),
+                        m('img', {src: item.screenshot}),
+                    ]),
+                    m('.modal-txt', m('p', `${item.name}: ${item.description}`)),
+                ]);
+            },
+            viewDetail: function(item) {
+                const branch = item.pkgbuild_url.match(/.*\/(.*)\/PKGBUILD$/)[1];
+                const zipUrl = `${item.upstrean_url}/archive/${branch}.zip`;
+                let body     = [
+                    m('li', [m('strong', 'description:'), ' ', item.pkgdesc]),
+                    m('li', [m('strong', 'url:'), ' ', item.upstrean_url]),
+                    m('li' [m('strong', 'license:'), ' ', item.licenses.map(l => `'${l}'`).join(', ')]),
+                ];
+                if (Array.isArray(item.depends) && item.depends.length > 0) {
+                    body.push(m('li', [m('strong', 'depends:'), ' ', item.depends.join(', ')]));
+                }
+                if (Array.isArray(item.make_depends) && item.make_depends.length > 0) {
+                    body.push(m('li', [m('strong', 'make depends:'), ' ', item.make_depends.join(', '), m('br')]));
+                }
+                if (Array.isArray(item.make_depends) && item.make_depends.length > 0) {
+                    body.push(m('li', [m('strong', 'make_depends:'), ' ', item.make_depends.join(', '), m('br')]));
+                }
+                body.push(
+                    m('li', [m('strong', 'created at:'), ' ', new Date(item.created_at)]),
+                    m('li', [m('strong', 'updated at:'), ' ', new Date(item.updated_at)]),
+                );
+                return [
+                    m('.modal-header', [
+                        m('h2', [
+                            m('strong', item.name),
+                            ' ',
+                            item.remote_version,
+                        ]),
+                        m('h4.github-link', m('a', {
+                            href: item.html_url,
+                            target: '_blank',
+                        }, [
+                            'view on github ',
+                            m('img', {
+                                src: 'images/github.png',
+                                width: 22,
+                                height: 22,
+                            }),
+                        ])),
+                    ]),
+                    m('.modal-body', [
+                        m('ul', body),
+                        m('p'),
+                        m('h3', 'How to install?'),
+                        m('hr'),
+                        m('ul', [
+                            m('strong', 'KCP helper'),
+                            m('li.ui-state-default', m('table', m('tbody', m('tr', [
+                                m('td[width="75%"]', `Searching or getting the needed files from KaOS Community Packages has been simplified with the addition of the package “kcp”. You can click the button to copy the required command kcp and paste it into your console. (kcp -i ${item.name})`),
+                                m('td[width="5%"]'),
+                                m('td[width="20%"]', {
+                                    style: 'vertical-align:mid;',
+                                }, m('button.btn.button.big', {
+                                    onclick: () => navigator.clipboard.writeText(`kcp -i ${item.name}`),
+                                }, 'Copy command')),
+                            ])))),
+                            m('strong', 'ZIP file'),
+                            m('li.ui-state-default', m('table', m('tbody', m('tr', [
+                                m('td[width="75%"]', [
+                                    'Click the just downloaded package zip and extract file to your build folder. The call to start to build and install the needed dependencies is ',
+                                    m('strong', 'makepkg -si'),
+                                    '.'
+                                ]),
+                                m('td[width="5%"]'),
+                                m('td[width="20%"]', {
+                                    style: 'vertical-align:mid;',
+                                }, m('a.button.big', {
+                                    href: zipUrl,
+                                    target: '_blank',
+                                }, 'Download ZIP')),
+                            ])))),
+                        ]),
+                    ]),
+                ];
+            },
+            viewPagination: function (vnode) {
+                const attrs = vnode.attrs;
+                const index = attrs.index;
+                if (!index || index <= 0) {
+                    return '';
+                }
+                const prev  = attrs.prev;
+                const next  = attrs.next;
+                const total = attrs.total;
+                const type  = attrs.type;
+                return m('.pagination', [
+                    !!prev ? m(m.route.Link, {
+                        selector: 'a.arrow.left',
+                        route: '/',
+                        params: KCP.getParams({modal: prev, typeModal: type}),
+                    }) : m('a.arrow.left.disabled'),
+                    m('p.text', [index, '/', total]),
+                    !!next ? m(m.route.Link, {
+                        selector: 'a.arrow.right',
+                        route: '/',
+                        params: KCP.getParams({modal: next, typeModal: type}),
+                    }) : m('a.arrow.right.disabled'),
+                ]);
+            },
             view: function(vnode) {
+                return m('.modal-overlay', m('.modal-content', [
+                    vnode.attrs.type === 'screenshot' ? vnode.state.viewImg(vnode.attrs.data) : vnode.state.viewDetail(vnode.attrs.data),
+                    m('.modal-footer', [
+                        vnode.state.viewPagination(vnode),
+                        m(m.route.Link, {
+                            selector: 'button.button_close',
+                            href: '/',
+                            params: KCP.getParams({modal: '', typeModal: ''}),
+                        }, 'Close')
+                    ]),
+                ]));
                 return '';
             },
         },
