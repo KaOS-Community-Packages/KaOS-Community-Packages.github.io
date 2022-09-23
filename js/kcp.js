@@ -193,6 +193,7 @@ const KCP = {
                             alt: item.name,
                             title: item.name,
                             src: item.screenshot,
+                            loading: 'lazy',
                         }),
                         m('.home-portfolio.text', [
                             m('h2.post-title-portfolio', m(m.route.Link, {
@@ -223,7 +224,10 @@ const KCP = {
                             target: '_blank',
                             title: 'Expand the image',
                         }, 'Expand'),
-                        m('img', {src: item.screenshot}),
+                        m('img', {
+                            src: item.screenshot,
+                            loading: 'lazy',
+                        }),
                     ]),
                     m('.modal-txt', m('p', `${item.name}: ${item.description}`)),
                 ]);
