@@ -173,7 +173,33 @@ const KCP = {
         },
         item: {
             view: function(vnode) {
-                return '';
+                const item        = vnode.attrs.data;
+                const s           = KCP.State;
+                const routeImg    = KCP.getRoute(s.category, s.sortBy, s.search, item.name, 'screenshot');
+                const routeDetail = KCP.getRoute(s.category, s.sortBy, s.search, item.name);
+                return m('li.portfolie-item2', m('div', [
+                    m('span.image-block', m(m.route.Link, {
+                        selector: 'a.image-zoom',
+                        href: routeImg,
+                        title: item.description,
+                    }, [
+                        m('img', {
+                            width: 170,
+                            height: 130,
+                            alt: item.name,
+                            title: item.name,
+                            src: item.screenshot,
+                        }),
+                        m('.home-portfolio.text', [
+                            m('h2.post-title-portfolio', m(m.route.Link, {
+                                selector: 'a',
+                                href: routeDetail,
+                                title: item.description,
+                            }, item.name)),
+                            m('p.post-subtitle-portfolio', item.description),
+                        ]),
+                    ])),
+                ]));
             },
         },
         list: {
