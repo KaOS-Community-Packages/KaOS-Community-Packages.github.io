@@ -15,7 +15,7 @@ const KCP = {
             case 'All':
                 break;
             case 'Broken':
-                filteredData = filteredData.filter(item => Array.isArray(item.broken) && item.broken.length > 0);
+                filteredData = filteredData.filter(item => Array.isArray(item.broken) && item.broken_depends.length > 0);
                 break;
             default:
                 filteredData = filteredData.filter(item => item.category === category);
@@ -94,7 +94,7 @@ const KCP = {
                 return m('.container', [
                     m('h2', [
                         m('a', {
-                            style: 'color:#666666!important;'
+                            style: 'color:#666666!important;',
                             href: 'https://github.com/KaOS-Community-Packages'
                         }, 'KCP'),
                         m('input#searchbox.srch.right', {
@@ -104,7 +104,7 @@ const KCP = {
                             oninput: ev => {
                                 ev.preventDefault();
                                 KCP.State.search = ev.target.value;
-                                KCP.refreshRoute(),
+                                KCP.refreshRoute();
                             },
                         }),
                     ]),
@@ -141,7 +141,7 @@ const KCP = {
                     selector: 'a',
                     href: route,
                 }, label));
-            };
+            },
             view: function(vnode) {
                 return m('ul.portfolio-categ.filter', [
                     m('li', 'Categories'),
@@ -201,7 +201,8 @@ const KCP = {
                             KCP.State.noticeViewed = true;
                             //document.getElementById('notice').classList.add('hidden');
                         },
-                    }, 'I Understand',
+                    }, 'I Understand'),
+                ]));
             },
         },
     },
