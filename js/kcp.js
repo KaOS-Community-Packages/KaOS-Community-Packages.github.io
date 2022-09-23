@@ -209,7 +209,9 @@ const KCP = {
         },
         list: {
             view: function(vnode) {
-                return '';
+                return m('ul.portfolio-area', vnode.attrs.data.map(item => m(KCP.Component.item, {
+                    data: item,
+                })));
             },
         },
         modal: {
@@ -337,7 +339,6 @@ const KCP = {
                         }, 'Close')
                     ]),
                 ]));
-                return '';
             },
         },
         noticeBar: {
