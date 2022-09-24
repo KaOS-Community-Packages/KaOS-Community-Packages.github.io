@@ -1,6 +1,5 @@
 const KCP = {
     fetch: function(url, result) {
-        let result = {};
         return m.request({
             url: url,
             method: 'GET',
@@ -412,6 +411,7 @@ const KCP = {
                 }
             },
             oninit: function (vnode) {
+                console.log(vnode.attrs);
                 const s = KCP.State;
                 if (!s.dataloaded) {
                     KCP.loadData().then(() => vnode.state.filter(vnode));
@@ -459,10 +459,10 @@ const KCP = {
     },
 };
 
-const searchBar = document.querySelector('header.Hero');
-const noticeBar = document.getElementById('#notice');
-const root      = document.querySelector('.wrapper');
+//const searchBar = document.querySelector('header.Hero');
+//const noticeBar = document.getElementById('#notice');
+const root = document.querySelector('main');
 
-m.mount(searchBar, KCP.Component.searchBar);
-m.mount(noticeBar, KCP.Component.noticeBar);
+//m.mount(searchBar, KCP.Component.searchBar);
+//m.mount(noticeBar, KCP.Component.noticeBar);
 m.route(root, '/', KCP.Route);
