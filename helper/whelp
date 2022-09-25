@@ -50,7 +50,6 @@ def print_title(*argv):
 local_file = 'data.json'
 kcp_file = get_kcp_path()
 
-
 def synchronize():
     print_title('Refresh KCP database…')
     update_remote_repo()
@@ -84,7 +83,6 @@ def synchronize():
             item['pkgdesc'] = item['description']
             item['screenshot'] = 'images/big.png'
         item.pop('local_version', None)
-        item.pop('remote_version', None)
 
     print_title('Save local database…')
     write_json(data_remote, local_file)
