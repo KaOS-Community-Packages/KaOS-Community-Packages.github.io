@@ -1,7 +1,7 @@
 #!/bin/bash
 git pull
 cd helper
-./whelp -sm
+./whelp -s
 cd ..
 git add images/.
 git add items/.
