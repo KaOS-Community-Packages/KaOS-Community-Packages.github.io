@@ -231,6 +231,10 @@ li.item {
     margin: 10px 0 2px 0;
 }
 
+.modal-footer hr {
+    margin: 10px 0;
+}
+
 .modal-close {
     width: 75px;
     height: 22px;
@@ -256,9 +260,11 @@ li.item {
     margin-top: 3px;
 }
 
-.pagination > .text {
+.pagination > .pagination-text {
     float: left;
     margin: 2px 4px;
+    font-size: 11px;
+    color: #666666;
 }
 
 .pagination > .arrow {
@@ -271,11 +277,12 @@ li.item {
 
 .pagination > .arrow.left {
     background: url('../images/buttons.png') 0 -71px no-repeat;
+    cursor: pointer;
 }
 
 .pagination > .arrow.left.disabled {
     background-position: 0 -87px;
-    cursor: pointer;
+    cursor: default;
 }
 
 .pagination > .arrow.right {
@@ -285,6 +292,11 @@ li.item {
 
 .pagination > .arrow.right.disabled {
     background-position: -22px -87px;
+    cursor: default;
+}
+
+a.disabled:hover {
+    border: none;
 }
 
 .modal-expand {
@@ -303,127 +315,78 @@ li.item {
     background: url('../images/buttons.png') -31px -47px no-repeat;
 }
 
-/*
-.dependency {
+.modal-content .depend-kaos {
+    color: #007aa4;
+    font-weight: bold,
+}
 
+.modal-content .depend-kcp, .modal-content a.depend-kcp {
     color: #337429;
     font-weight: bold;
-    text-decoration: underline;
 }
 
-.dependency-k {
-
-    color: #007aa4;
-    font-weight: bold;
-}
-
-.dependency-null {
-
+.depend-broken {
     color: #a51612;
-    text-decoration: line-through;
 }
 
-em {
-    font-style: italic
+.how-to {
+    margin: 20px 0;
 }
 
-.aligncenter {
-    display: block;
-    margin: 0 auto
+.package-install {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.alignleft {
-    float: left
+.package-instruction {
+    width: 80%;
 }
 
-.alignright {
-    float: right
+.package-get {
+    width: 15%;
 }
 
-.column-clear {
-    clear: both;
+button.package-button, a.package-button {
+    font-size: 14px;
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font: 11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    zoom: 1;
+    *display: inline;
 }
 
-
-.portfolio-content,
-.portfolio-area {
-    width: 1080px;
+button.package-button:hover, a.package-button:hover {
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
 }
-
-.title-page {
-    font-size: 30px;
-    margin: 40px 0 10px 0;
-    color: #151515;
-    font-weight: bold;
-}
-
-
-.goto {
-    float: right;
-    width: 130px;
-    margin: -80px 30px 0px 0px;
-}
-
-.portfolio-categ {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-}
-
-.portfolio-sort {
-    margin-top: -20px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-}
-
-li.active a {
-    color:#666666;
-    font-weight:bold;
-}
-
-.container-block {
-    padding: 25px;
-    position: fixed;
-    left: 0;
-}
-
-li.ui-state-default {
-    background: #fff0;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-
-    padding-bottom: 10px;
-    font-size: 12px;
-}
-
-li.ui-state-def.portfolio-area li {
-￼    float: left;
-￼    margin: 0 12px 20px 0;
-￼    overflow: hidden;
-￼    width: 193px;
-￼    height: 238px;
-￼    padding: 5px;
-}ault:last-child {
-    border-bottom: none;
-}
-
-.right {
-    position: absolute;
-    right: 25px;
-    top:20px;
-;
-}
-
-
-.srch  {
-    width: 190px;
-    padding: 3px 10px;
-    margin: 4px 2px;
-    border: 2px solid #CCD6E4;
-    border-radius: 6px;
-    line-height: 2em;
-}
-
-
-*/

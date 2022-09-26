@@ -98,6 +98,13 @@ const KCP = {
         }
         return data.data.packages.find(it => it.name === name);
     },
+    dependType: function (name) {
+        const data = KCP.State.data.data;
+        if (data.broken_depends.includes(name)) {
+            return 'broken';
+        }
+        return data.packages.map(it => it.name).includes(name) ? 'kcp' : 'kaos';
+    },
     pagination: function(data, name) {
         if (!Array.isArray(data)) {
             return null;
@@ -276,14 +283,6 @@ const KCP = {
                 })));
             },
         },
-        test: {
-            view: (vnode) => {
-                console.log('begin debug');
-                console.log(vnode.attrs);
-                console.log('end debug');
-                return '';
-            },
-        },
         modalImage: {
             view: function (vnode) {
                 const item = vnode.attrs.data;
@@ -305,11 +304,36 @@ const KCP = {
                 ]);
             },
         },
+        depend: {
+            view: function (vnode) {
+                const name = vnode.attrs.name;
+                const type = KCP.dependType(name);
+                if (type === 'kcp') {
+                    return m(m.route.Link, {
+                        selector: 'a.depend-kcp',
+                        title: name,
+                        href: '/',
+                        params: KCP.routeParams({modal: name, typeModal: ''}),
+                    }, [
+                        name,
+                        ' ',
+                    ]);
+                }
+                return type === 'broken' ? m('i.depend-broken', [
+                    m('s', name),
+                    ' ',
+                ]) : m('b.depend-kaos', [
+                    name,
+                    ' ',
+                ]);
+            },
+        },
         modalDetail: {
             view: function (vnode) {
                 const item         = vnode.attrs.data;
                 const branch       = item.pkgbuild_url.match(/.*\/(.*)\/PKGBUILD/)[1];
                 const zipUrl       = `${item.upstrean_url}/archive/${branch}.zip`;
+                const dep          = KCP.Component.depend;
                 const description  = [
                     m('li', [m('strong', 'description:'), ' ', item.pkgdesc]),
                     m('li', [m('strong', 'url:'), ' ', m('a', {
@@ -319,7 +343,7 @@ const KCP = {
                     m('li', [m('strong', 'license:'), ' ', item.licenses.map(l => `'${l}'`).join(', ')]),
                 ];
                 if (Array.isArray(item.depends) && item.depends.length > 0) {
-                    description.push(m('li', [m('strong', 'depends:'), ' ', item.depends.join(', ')]));
+                    description.push(m('li', [m('strong', 'depends:'), ' ', item.depends.map(d => m(dep, {name: d}))]));
                 }
                 if (Array.isArray(item.make_depends) && item.make_depends.length > 0) {
                     description.push(m('li', [m('strong', 'make depends:'), ' ', item.make_depends.join(', '), m('br')]));
@@ -331,7 +355,6 @@ const KCP = {
                     m('li', [m('strong', 'created at:'), ' ', (new Date(item.created_at).toString())]),
                     m('li', [m('strong', 'updated at:'), ' ', (new Date(item.updated_at).toString())])
                 );
-                console.log(item);
                 return [
                     m('.modal-header', [
                         m('h2', [m('strong', item.name), ' ', item.remote_version]),
@@ -351,8 +374,10 @@ const KCP = {
                     m('.modal-body', [
                         m('ul.package-description', description),
                         m('p'),
-                        m('h3', 'How to install?'),
-                        m('hr'),
+                        m('.how-to', [
+                            m('h3', 'How to install?'),
+                            m('hr'),
+                        ]),
                         m('p', m('strong', 'KCP helper')),
                         m('.package-install', [
                             m('.package-instruction', m('p', [
@@ -361,11 +386,13 @@ const KCP = {
                                 'You can click the button to copy the required command kcp and paste it into your console.',
                                 ' ',
                                 m('strong', `kcp -i ${item.name}`),
+                                '.',
                             ])),
-                            m('.package-get', m('button.package-button', {
+                            m('.package-get', m('div', m('button.package-button', {
                                 onclick: ev => navigator.clipboard.writeText(`kcp -i ${item.name}`),
-                            }, 'Copy command')),
+                            }, 'Copy command'))),
                         ]),
+                        m('p', m('strong', 'ZIP file')),
                         m('.package-install', [
                             m('.package-instruction', m('p', [
                                 'Click the just downloaded package zip and extract file to your build folder.',
@@ -375,7 +402,7 @@ const KCP = {
                                 m('strong', 'makepkg -si'),
                                 '.',
                             ])),
-                            m('.package-get', m('a', {
+                            m('.package-get', m('a.package-button', {
                                 href: zipUrl,
                                 target: '_blank',
                             }, 'Download ZIP')),
@@ -390,15 +417,15 @@ const KCP = {
                 return m('.pagination', [
                     !!pagination.prev ? m(m.route.Link, {
                         selector: 'a.arrow.left',
-                        route: '/',
+                        href: '/',
                         params: KCP.routeParams({modal: pagination.prev}),
-                    }, 'Previous') : m('a.arrow.left.disabled', 'Previous'),
+                    }, '') : m('a.arrow.left.disabled', ''),
                     m('p.pagination-text', [pagination.index, '/', pagination.total]),
                     !!pagination.next ? m(m.route.Link, {
                         selector: 'a.arrow.right',
-                        route: '/',
+                        href: '/',
                         params: KCP.routeParams({modal: pagination.next}),
-                    }, 'Next') : m('a.arrow.right.disabled', 'Next'),
+                    }, '') : m('a.arrow.right.disabled', ''),
                 ]);
             },
         },
@@ -409,12 +436,13 @@ const KCP = {
                 return m('.modal-overlay', m('.modal-content', [
                     attrs.typeModal === 'screenshot' ? m(comp.modalImage, {data: attrs.data}) : m(comp.modalDetail, {data: attrs.data}),
                     m('.modal-footer', [
-                        //attrs.pagination ? m(comp.pagination, {pagination: attrs.pagination}) : '',
+                        m('hr'),
+                        attrs.pagination ? m(comp.pagination, {pagination: attrs.pagination}) : '',
                         m(m.route.Link, {
                             selector: 'span.modal-close',
                             href: '/',
                             params: KCP.routeParams({modal: '', typeModal: ''}),
-                        }, 'Close')
+                        }, '')
                     ]),
                 ]));
             },
