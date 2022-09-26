@@ -11,7 +11,7 @@ To facilitate the maintenance and the updates of KCP-Center, it has created an a
 ```
 $ git clone https://github.com/KaOS-Community-Packages/KaOS-Community-Packages.github.io.git
 $ cd KaOS-Community-Packages.github.io/helper
-$ ./whelp -sm
+$ ./whelp -s
 $ cd ..
 $ git add .
 $ git commit -am "update web"
@@ -93,5 +93,3 @@ $ git push
 ```
 
 You can test the KCP-Center locally before you commit it, by opening the file *index.html* in your favourite web-browser.
-
-
