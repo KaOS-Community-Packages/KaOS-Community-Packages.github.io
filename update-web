@@ -4,6 +4,5 @@ cd helper
 ./whelp -s
 cd ..
 git add images/.
-git add items/.
 git commit -am "update web"
 git push
