@@ -353,7 +353,7 @@ const KCP = {
                 }
                 description.push(
                     m('li', [m('strong', 'created at:'), ' ', (new Date(item.created_at).toString())]),
-                    m('li', [m('strong', 'updated at:'), ' ', (new Date(item.updated_at).toString())])
+                    m('li', [m('strong', 'updated at:'), ' ', (new Date(item.pushed_at).toString())])
                 );
                 return [
                     m('.modal-header', [
