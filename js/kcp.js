@@ -346,10 +346,10 @@ const KCP = {
                     description.push(m('li', [m('strong', 'depends:'), ' ', item.depends.map(d => m(dep, {name: d}))]));
                 }
                 if (Array.isArray(item.make_depends) && item.make_depends.length > 0) {
-                    description.push(m('li', [m('strong', 'make depends:'), ' ', item.make_depends.join(', '), m('br')]));
+                    description.push(m('li', [m('strong', 'make depends:'), ' ', item.make_depends.map(d => m(dep, {name: d}))]));
                 }
-                if (Array.isArray(item.make_depends) && item.make_depends.length > 0) {
-                    description.push(m('li', [m('strong', 'make_depends:'), ' ', item.make_depends.join(', '), m('br')]));
+                if (Array.isArray(item.opt_depends) && item.opt_depends.length > 0) {
+                    description.push(m('li', [m('strong', 'opt depends:'), ' ', item.opt_depends.map(d => m(dep, {name: d}))]));
                 }
                 description.push(
                     m('li', [m('strong', 'created at:'), ' ', (new Date(item.created_at).toString())]),
