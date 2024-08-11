@@ -9,7 +9,7 @@ The KCP-Center is a web site hosted on Github, that allows us to explore - in a 
 To facilitate the maintenance and the updates of KCP-Center, it has created an assistant, which is a script in python called *whelp* that allows to keep the website synchronized with the repository of the KCP's packages. One of the possibilities allowed by whelp is to assign a category or a screenshot to any package, besides to capture its meta-data automatically. The tools *git* and *whelp* combinated allow to update the website in an easy way, such as in this example:
 
 ```
-$ git clone https://github.com/KaOS-Community-Packages/KaOS-Community-Packages.github.io.git
+$ git clone git@github.com:KaOS-Community-Packages/KaOS-Community-Packages.github.io.git
 $ cd KaOS-Community-Packages.github.io/helper
 $ ./whelp -s
 $ cd ..
